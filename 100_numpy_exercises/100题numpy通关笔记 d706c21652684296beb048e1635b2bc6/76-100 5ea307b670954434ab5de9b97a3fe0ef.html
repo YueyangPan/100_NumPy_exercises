@@ -1,0 +1,934 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>76-100</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="5ea307b6-7095-4434-ab5d-e9b97a3fe0ef" class="page sans"><header><h1 class="page-title">76-100</h1></header><div class="page-body"><p id="c28cb17f-6669-4bc9-a74f-d7ee98f15e96" class=""><strong>#### 76. Consider a one-dimensional array Z, build a two-dimensional array whose first row is (Z[0],Z[1],Z[2]) and each subsequent row is  shifted by 1 (last row should be (Z[-3],Z[-2],Z[-1]) (★★★)</strong></p><pre id="8e873f09-9d24-4684-a271-15fc3fef6bce" class="code"><code>Z = np.arange(10)
+a=[]
+for i in range(len(Z)-2):
+    a.append([Z[i],Z[i+1],Z[i+2]])
+print(a)</code></pre><p id="0825b337-fc1d-4a4e-be2a-c8b13df471d3" class="">`hint: from <code>numpy.lib</code> import <code>stride_tricks</code>`</p><pre id="92cccad9-baeb-4329-bc7a-4724b2447f8c" class="code"><code># Method 2:
+from numpy.lib import stride_tricks
+
+def rolling(a,window):
+    shape = (a.size - window +1, window)
+    strides = (a.strides[0], a.strides[0])
+    return stride_tricks.as_strided(a,shape=shape,strides=strides)
+Z = rolling(np.arange(10),3)
+print(Z)</code></pre><p id="0e5752a4-f1e3-4d86-8b0b-507f2be3def7" class=""><code>numpy.lib.stride_tricks.as_strided</code>: <a href="https://numpy.org/doc/stable/reference/generated/numpy.lib.stride_tricks.as_strided.html?highlight=stride_tricks">https://numpy.org/doc/stable/reference/generated/numpy.lib.stride_tricks.as_strided.html?highlight=stride_tricks</a></p><p id="57693400-d10d-4527-b907-ebad15fb1a7c" class="">
+</p><p id="bc522281-2a32-4e66-9a76-cf7229e8739a" class=""><strong>#### 77. How to negate a boolean, or to change the sign of a float inplace? (★★★)</strong></p><p id="f442f352-2bb3-418d-a543-2fe0dbcfa28f" class="">`hint: <code>np.logical_not</code>, <code>np.negative</code>`</p><pre id="c50c5f09-d1f9-4450-b1cb-f9ae93e05bff" class="code"><code>Z = np.random.randint(0,2,100)
+np.logical_not(Z, out=Z)
+
+Z = np.random.uniform(-1.0,1.0,100)
+np.negative(Z, out=Z)</code></pre><p id="6a5ff079-9a4e-483c-9ac2-88c415f71c46" class="">
+</p><p id="90d500b0-172b-4aa8-8ed8-67606ee07571" class="">#### 78. Consider 2 sets of points P0,P1 describing lines (2d) and a point p, how to compute distance from p to each line i (P0[i],P1[i])? (★★★)</p><pre id="52679d79-4505-4fe5-9811-031a777eb944" class="code"><code>def distance(p0,p1,p):
+    t=p1-p0
+    l=(t**2).sum(axis=1)
+    u= ((p[:,0]-p0[:,0])*t[:,0] + (p[:,1]-p0[:,1]*t[:,1])) /l
+    u=u.reshape(len(u),1)
+    d=p0+u*t-p
+    return np.sqrt((d**2).sum(axis=1))
+
+p0=np.random.uniform(-10,10,(10,2))
+p1=np.random.uniform(-10,10,(10,2))
+p =np.random.uniform(-10,10,( 1,2))
+print(distance(p0,p1,p))</code></pre><figure id="2fc2b938-6d5d-4901-8cb6-a8b7d6c1ba76" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>u</mi><mo>=</mo><mfrac><mrow><mover accent="true"><mrow><msub><mi>p</mi><mn>0</mn></msub><msub><mi>p</mi><mn>1</mn></msub></mrow><mo stretchy="true">undefined</mo></mover><mo>⋅</mo><mover accent="true"><mrow><msub><mi>p</mi><mn>0</mn></msub><mi>p</mi></mrow><mo stretchy="true">undefined</mo></mover></mrow><mrow><mi mathvariant="normal">∣</mi><mover accent="true"><mrow><msub><mi>p</mi><mn>0</mn></msub><msub><mi>p</mi><mn>1</mn></msub></mrow><mo stretchy="true">undefined</mo></mover><msup><mi mathvariant="normal">∣</mi><mn>2</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">u=\frac{\overrightarrow{p_0p_1}\cdot\overrightarrow{p_0p}}{|\overrightarrow{p_0p_1}|^2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">u</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.7221200000000003em;vertical-align:-1.0925600000000002em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6295600000000001em;"><span style="top:-2.15744em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">∣</span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9525600000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span class="svg-align" style="top:-3.43056em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="height:0.522em;min-width:0.888em;"><svg width='400em' height='0.522em' viewBox='0 0 400000 522' preserveAspectRatio='xMaxYMin slice'><path d='M0 241v40h399891c-47.3 35.3-84 78-110 128
+-16.7 32-27.7 63.7-33 95 0 1.3-.2 2.7-.5 4-.3 1.3-.5 2.3-.5 3 0 7.3 6.7 11 20
+ 11 8 0 13.2-.8 15.5-2.5 2.3-1.7 4.2-5.5 5.5-11.5 2-13.3 5.7-27 11-41 14.7-44.7
+ 39-84.5 73-119.5s73.7-60.2 119-75.5c6-2 9-5.7 9-11s-3-9-9-11c-45.3-15.3-85
+-40.5-119-75.5s-58.3-74.8-73-119.5c-4.7-14-8.3-27.3-11-40-1.3-6.7-3.2-10.8-5.5
+-12.5-2.3-1.7-7.5-2.5-15.5-2.5-14 0-21 3.7-21 11 0 2 2 10.3 6 25 20.7 83.3 67
+ 151.7 139 205zm0 0v40h399900v-40z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.19444em;"><span></span></span></span></span></span><span class="mord"><span class="mord">∣</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.740108em;"><span style="top:-2.9890000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9525600000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span class="svg-align" style="top:-3.43056em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="height:0.522em;min-width:0.888em;"><svg width='400em' height='0.522em' viewBox='0 0 400000 522' preserveAspectRatio='xMaxYMin slice'><path d='M0 241v40h399891c-47.3 35.3-84 78-110 128
+-16.7 32-27.7 63.7-33 95 0 1.3-.2 2.7-.5 4-.3 1.3-.5 2.3-.5 3 0 7.3 6.7 11 20
+ 11 8 0 13.2-.8 15.5-2.5 2.3-1.7 4.2-5.5 5.5-11.5 2-13.3 5.7-27 11-41 14.7-44.7
+ 39-84.5 73-119.5s73.7-60.2 119-75.5c6-2 9-5.7 9-11s-3-9-9-11c-45.3-15.3-85
+-40.5-119-75.5s-58.3-74.8-73-119.5c-4.7-14-8.3-27.3-11-40-1.3-6.7-3.2-10.8-5.5
+-12.5-2.3-1.7-7.5-2.5-15.5-2.5-14 0-21 3.7-21 11 0 2 2 10.3 6 25 20.7 83.3 67
+ 151.7 139 205zm0 0v40h399900v-40z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.19444em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9525600000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">p</span></span></span><span class="svg-align" style="top:-3.43056em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="height:0.522em;min-width:0.888em;"><svg width='400em' height='0.522em' viewBox='0 0 400000 522' preserveAspectRatio='xMaxYMin slice'><path d='M0 241v40h399891c-47.3 35.3-84 78-110 128
+-16.7 32-27.7 63.7-33 95 0 1.3-.2 2.7-.5 4-.3 1.3-.5 2.3-.5 3 0 7.3 6.7 11 20
+ 11 8 0 13.2-.8 15.5-2.5 2.3-1.7 4.2-5.5 5.5-11.5 2-13.3 5.7-27 11-41 14.7-44.7
+ 39-84.5 73-119.5s73.7-60.2 119-75.5c6-2 9-5.7 9-11s-3-9-9-11c-45.3-15.3-85
+-40.5-119-75.5s-58.3-74.8-73-119.5c-4.7-14-8.3-27.3-11-40-1.3-6.7-3.2-10.8-5.5
+-12.5-2.3-1.7-7.5-2.5-15.5-2.5-14 0-21 3.7-21 11 0 2 2 10.3 6 25 20.7 83.3 67
+ 151.7 139 205zm0 0v40h399900v-40z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.19444em;"><span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.0925600000000002em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></div></figure><p id="c67a2898-589b-4c2c-b209-dda084a49e61" class="">which can be seen as the projection of <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mrow><msub><mi>p</mi><mn>0</mn></msub><mi>p</mi></mrow><mo stretchy="true">undefined</mo></mover></mrow><annotation encoding="application/x-tex">\overrightarrow{p_0p}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.147em;vertical-align:-0.19444em;"></span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9525600000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">p</span></span></span><span class="svg-align" style="top:-3.43056em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="height:0.522em;min-width:0.888em;"><svg width='400em' height='0.522em' viewBox='0 0 400000 522' preserveAspectRatio='xMaxYMin slice'><path d='M0 241v40h399891c-47.3 35.3-84 78-110 128
+-16.7 32-27.7 63.7-33 95 0 1.3-.2 2.7-.5 4-.3 1.3-.5 2.3-.5 3 0 7.3 6.7 11 20
+ 11 8 0 13.2-.8 15.5-2.5 2.3-1.7 4.2-5.5 5.5-11.5 2-13.3 5.7-27 11-41 14.7-44.7
+ 39-84.5 73-119.5s73.7-60.2 119-75.5c6-2 9-5.7 9-11s-3-9-9-11c-45.3-15.3-85
+-40.5-119-75.5s-58.3-74.8-73-119.5c-4.7-14-8.3-27.3-11-40-1.3-6.7-3.2-10.8-5.5
+-12.5-2.3-1.7-7.5-2.5-15.5-2.5-14 0-21 3.7-21 11 0 2 2 10.3 6 25 20.7 83.3 67
+ 151.7 139 205zm0 0v40h399900v-40z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.19444em;"><span></span></span></span></span></span></span></span></span></span><span>﻿</span></span> on <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mrow><msub><mi>p</mi><mn>0</mn></msub><msub><mi>p</mi><mn>1</mn></msub></mrow><mo stretchy="true">undefined</mo></mover></mrow><annotation encoding="application/x-tex">\overrightarrow{p_0p_1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.147em;vertical-align:-0.19444em;"></span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9525600000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span class="svg-align" style="top:-3.43056em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="height:0.522em;min-width:0.888em;"><svg width='400em' height='0.522em' viewBox='0 0 400000 522' preserveAspectRatio='xMaxYMin slice'><path d='M0 241v40h399891c-47.3 35.3-84 78-110 128
+-16.7 32-27.7 63.7-33 95 0 1.3-.2 2.7-.5 4-.3 1.3-.5 2.3-.5 3 0 7.3 6.7 11 20
+ 11 8 0 13.2-.8 15.5-2.5 2.3-1.7 4.2-5.5 5.5-11.5 2-13.3 5.7-27 11-41 14.7-44.7
+ 39-84.5 73-119.5s73.7-60.2 119-75.5c6-2 9-5.7 9-11s-3-9-9-11c-45.3-15.3-85
+-40.5-119-75.5s-58.3-74.8-73-119.5c-4.7-14-8.3-27.3-11-40-1.3-6.7-3.2-10.8-5.5
+-12.5-2.3-1.7-7.5-2.5-15.5-2.5-14 0-21 3.7-21 11 0 2 2 10.3 6 25 20.7 83.3 67
+ 151.7 139 205zm0 0v40h399900v-40z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.19444em;"><span></span></span></span></span></span></span></span></span></span><span>﻿</span></span>, then divided by <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∣</mi><mover accent="true"><mrow><msub><mi>p</mi><mn>0</mn></msub><msub><mi>p</mi><mn>1</mn></msub></mrow><mo stretchy="true">undefined</mo></mover><mi mathvariant="normal">∣</mi></mrow><annotation encoding="application/x-tex">|\overrightarrow{p_0p_1}|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.20256em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9525600000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span class="svg-align" style="top:-3.43056em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="height:0.522em;min-width:0.888em;"><svg width='400em' height='0.522em' viewBox='0 0 400000 522' preserveAspectRatio='xMaxYMin slice'><path d='M0 241v40h399891c-47.3 35.3-84 78-110 128
+-16.7 32-27.7 63.7-33 95 0 1.3-.2 2.7-.5 4-.3 1.3-.5 2.3-.5 3 0 7.3 6.7 11 20
+ 11 8 0 13.2-.8 15.5-2.5 2.3-1.7 4.2-5.5 5.5-11.5 2-13.3 5.7-27 11-41 14.7-44.7
+ 39-84.5 73-119.5s73.7-60.2 119-75.5c6-2 9-5.7 9-11s-3-9-9-11c-45.3-15.3-85
+-40.5-119-75.5s-58.3-74.8-73-119.5c-4.7-14-8.3-27.3-11-40-1.3-6.7-3.2-10.8-5.5
+-12.5-2.3-1.7-7.5-2.5-15.5-2.5-14 0-21 3.7-21 11 0 2 2 10.3 6 25 20.7 83.3 67
+ 151.7 139 205zm0 0v40h399900v-40z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.19444em;"><span></span></span></span></span></span><span class="mord">∣</span></span></span></span></span><span>﻿</span></span></p><p id="7346cedc-c8da-484c-a5ba-97435debb92c" class="">Tips: </p><pre id="9a2dc199-0a31-484e-af5d-614000be74ad" class="code"><code>u=u.reshape(len(u),1)
+#instead of 
+u.reshape(len(u),1)
+#otherwise:
+# error: operands could not be broadcast together with shapes (10,) (10,2)</code></pre><p id="785b1ea6-6d92-4412-8d8b-4c45cc68c382" class="">
+</p><p id="2fbec1f9-4538-4557-8db1-3a3d245ae8f9" class="">
+</p><p id="ad68c85e-acaa-4b45-b9ac-ac8350002313" class="">#### 79. Consider 2 sets of points P0,P1 describing lines (2d) and a set of points P, how to compute distance from each point j (P[j]) to each line i (P0[i],P1[i])? (★★★)</p><pre id="a62a13cb-1d94-4cfc-b206-03eb955d04b0" class="code"><code># based on distance function from previous question
+def distance(p0,p1,p):
+    t=p1-p0
+    l=(t**2).sum(axis=1)
+    u= ((p[...,0]-p0[:,0])*t[:,0] + (p[...,1]-p0[:,1]*t[:,1])) /l
+    u=u.reshape(len(u),1)
+    d=p0+u*t-p
+    return np.sqrt((d**2).sum(axis=1))
+
+P0 = np.random.uniform(-10, 10, (10,2))
+P1 = np.random.uniform(-10,10,(10,2))
+p = np.random.uniform(-10, 10, (10,2))
+print(np.array([distance(P0,P1,p_i) for p_i in p]))</code></pre><p id="f24ec3e1-0452-414d-81b7-1a08047b007b" class="">Tips: <code>p[...,0]</code> instead of <code>p[:,0]</code> for more than one dimensions</p><p id="7e7a6576-7926-42c3-8c0f-3081ff1ac243" class="">
+</p><p id="5d0395d4-d8df-4aec-a7d7-5a40c5554826" class=""><strong>#### 80. Consider an arbitrary array, write a function that extract a subpart with a fixed shape and centered on a given element (pad with a `fill` value when necessary) (★★★)</strong></p><p id="081ee46f-d244-4967-baf5-4f7e5aa1062b" class="">`hint: <code>minimum</code>, <code>maximum</code>, <code>slice</code>`</p><pre id="b339ee43-f6c1-4da1-8867-8ed9aa3241f9" class="code"><code>Z = np.random.randint(0,10,(10,10))
+shape = (5,5)
+fill  = 0
+position = (1,1)
+
+R = np.ones(shape, dtype=Z.dtype)*fill
+P  = np.array(list(position)).astype(int)
+Rs = np.array(list(R.shape)).astype(int)
+Zs = np.array(list(Z.shape)).astype(int)
+
+R_start = np.zeros((len(shape),)).astype(int)
+R_stop  = np.array(list(shape)).astype(int)
+#print(R_start,R_stop)
+Z_start = (P-Rs//2)
+Z_stop  = (P+Rs//2)+Rs%2
+
+R_start = (R_start - np.minimum(Z_start,0)).tolist()
+Z_start = (np.maximum(Z_start,0)).tolist()
+R_stop = np.maximum(R_start, (R_stop - np.maximum(Z_stop-Zs,0))).tolist()
+Z_stop = (np.minimum(Z_stop,Zs)).tolist()
+
+r = [slice(start,stop) for start,stop in zip(R_start,R_stop)]
+z = [slice(start,stop) for start,stop in zip(Z_start,Z_stop)]
+R[r] = Z[z]
+print(Z)
+print(R)</code></pre><p id="53742746-ba52-48a7-8437-4b3b6a4efd85" class="">
+</p><p id="c7279304-a70d-417b-b342-174ac23a91fe" class=""><strong>#### 81. Consider an array Z = [1,2,3,4,5,6,7,8,9,10,11,12,13,14], how to generate an array R = [[1,2,3,4], [2,3,4,5], [3,4,5,6], ..., [11,12,13,14]]? (★★★)</strong></p><p id="421e2f15-a8ec-4e95-8772-1a1d8f7cad94" class="">`hint: <code>stride_tricks.as_strided</code>`</p><pre id="68d0b631-fa23-4814-9728-6afd68286c27" class="code"><code>Z= np.arange(1,15,dtype=np.uint64)
+R= stride_tricks.as_strided(Z,(11,4),(8,8))
+print(R)
+
+Z= np.arange(1,15,dtype=np.uint32)
+R= stride_tricks.as_strided(Z,(11,4),(4,4))
+print(R)</code></pre><p id="da5874b5-0f57-4014-bc5b-870f2883c6a9" class="">Tips: Strides are tuple of <strong>bytes</strong> to step in each dimension, defaults to x.strides, not the same as that in machine learning.</p><p id="75b5487d-d4e4-4e77-b343-2ab39dab1790" class="">
+</p><p id="45945b7c-425d-4926-9e69-f0039efdd4f1" class=""><strong>#### 82. Compute a matrix rank (★★★)</strong></p><p id="ae3a4ae7-2c82-44b5-9d1a-3db3c074cb00" class="">`hint: <code>np.linalg.svd</code>` Singular Value Decomposition</p><pre id="0ecc8268-6ee8-4304-87b0-39ac27fa62e8" class="code"><code>Z = np.random.uniform(0,1,(10,10))
+U, S, V = np.linalg.svd(Z) # Singular Value Decomposition
+rank = np.sum(S &gt; 1e-10)
+print(rank)</code></pre><p id="c2dfc115-ddba-4e14-8b9b-85920fc7442a" class="">
+</p><p id="e2cb36d9-7829-425c-af67-f815e98d3b86" class=""><strong>#### 83. How to find the most frequent value in an array?</strong></p><p id="1dd53ec6-c632-43cf-b69c-37f58d27153f" class="">`hint: <code>np.bincount</code>, <code>argmax</code>`</p><pre id="c2221878-eb16-4b53-a1c8-8777cd1a8050" class="code"><code>Z = np.random.randint(0,10,50)
+print(np.bincount(Z).argmax())</code></pre><p id="a0a969c8-bc51-42a5-8977-ef51ed133bc2" class="">Tips: If the value is very large or not an int, use a dict to count, or directly use <code>collections</code>.<code>Counter</code>(list(Z))</p><pre id="27ec2f6f-418d-4bb9-8f29-2699ffcf97a6" class="code"><code>import collections
+a=collections.Counter(list(Z))
+Zmax=a.most_common(1)[0]
+print(Zmax[0])</code></pre><p id="74d4dee1-dd81-44b5-99f0-5a5fc51dcb00" class="">
+</p><p id="4bf0239b-8b37-4936-9c96-18d62a6eef0a" class=""><strong>#### 84. Extract all the contiguous 3x3 blocks from a random 10x10 matrix (★★★)</strong></p><p id="ecf41882-5a1d-406f-81bc-11234603cef8" class="">`hint: <code>stride_tricks.as_strided</code>`</p><pre id="9412841f-4480-4035-be77-9542382ed71c" class="code"><code>Z = np.random.randint(0,5,(10,10))
+n = 3
+i = 1 + (Z.shape[0]-3)
+j = 1 + (Z.shape[1]-3)
+C = stride_tricks.as_strided(Z, shape=(i, j, n, n), strides=Z.strides + Z.strides)
+print(C)</code></pre><p id="1afc1f37-8599-4186-9e2b-4013e1b3fbdf" class="">
+</p><p id="48be44a7-00d9-4a53-b9fb-3ff97ac8f69d" class=""><strong>#### 85. Create a 2D array subclass such that Z[i,j] == Z[j,i] (★★★)</strong></p><p id="8205a3dc-a5cb-4e12-872d-34a655eec31e" class="">`hint: class method`</p><pre id="0ded91c1-b8dc-4148-8a50-d9afb0a53d57" class="code"><code>class Symetric(np.ndarray):
+    def __setitem__(self, index, value):
+        i,j = index
+        #super(Symetric, self).__setitem__((i,j), value)   # python 2.x
+        #super(Symetric, self).__setitem__((j,i), value)   # python 2.x
+        super().__setitem__((i,j), value)  # python 3.x
+        super().__setitem__((j,i),value)   # python 3.x
+        
+def symetric(Z):
+    return np.asarray(Z + Z.T - np.diag(Z.diagonal())).view(Symetric)
+
+S = symetric(np.random.randint(0,10,(5,5)))
+S[2,3] = 42
+print(S)</code></pre><p id="e6d6879a-1a27-4f6d-aa8b-d71377711cf9" class=""><code>super()</code> 首先找到Symetric的父类（np.ndarray），然后把类Symetric的对象转换为父类np.ndarray的对象</p><p id="c5f81c2a-3edc-4024-aa08-a45101ddc7f6" class="">
+</p><p id="45209c30-3519-4953-84bb-8753b380f079" class=""><strong>#### 86. Consider a set of p matrices with shape (n,n) and a set of p vectors with shape (n,1). How to compute the sum of of the p matrix products at once? (result has shape (n,1)) (★★★)</strong></p><p id="7afc69a1-19ba-4be6-a410-924994c395e6" class="">`hint: <code>np.tensordot</code>`</p><pre id="717fe2a9-fb3a-46a5-ad18-aaf0e1c3a190" class="code"><code>p, n = 10, 20
+M = np.ones((p,n,n))
+V = np.ones((p,n,1))
+S = np.tensordot(M, V, axes=[[0, 2], [0, 1]])
+print(S)
+
+# It works, because:
+# M is (p,n,n)
+# V is (p,n,1)
+# Thus, summing over the paired axes 0 and 0 (of M and V independently),
+# and 2 and 1, to remain with a (n,1) vector</code></pre><figure id="a14ab23c-8629-403b-b79f-89cb9f3d8a15" class="image"><a href="76-100%205ea307b670954434ab5de9b97a3fe0ef/Screen_Shot_2021-07-01_at_12.35.38_AM.png"><img style="width:1486px" src="76-100%205ea307b670954434ab5de9b97a3fe0ef/Screen_Shot_2021-07-01_at_12.35.38_AM.png"/></a></figure><p id="b91daca9-914d-4d70-b859-1ec67060893b" class="">
+</p><p id="fc27addd-ac32-42c8-b575-ccb90aa973be" class=""><strong>#### 87. Consider a 16x16 array, how to get the block-sum (block size is 4x4)? (★★★)</strong></p><p id="927a5b80-256b-4b26-8141-24c0ba999f9d" class="">`hint: <code>np.add.reduceat</code>`</p><pre id="134d851d-4167-4d94-b399-d13410183fc5" class="code"><code>Z = np.ones((16,16))
+k = 4
+S = np.add.reduceat(np.add.reduceat(Z, np.arange(0, Z.shape[0], k), axis=0), np.arange(0, Z.shape[1], k), axis=1)
+print(S)</code></pre><p id="985acdf1-e59f-4c91-8c00-b442d0ac69c8" class=""><code>np.add.reduceat</code> : reduceat(array, indices, axis=0, dtype=None, out=None)
+Performs a (local) reduce with specified slices over a single axis.</p><p id="4b859ce0-d645-4b07-88b1-1af7eb2c2f5b" class="">
+</p><p id="3fca0951-73cd-48bb-8d94-01f383eddd93" class=""><strong>#### 88. How to implement the Game of Life using numpy arrays? (★★★)</strong></p><pre id="cb4b1d13-ee69-4f5e-b01b-41a1f5ce4ca2" class="code"><code># Author: Nicolas Rougier
+def iterate(Z):
+    # Count neighbours
+    N = (Z[0:-2,0:-2] + Z[0:-2,1:-1] + Z[0:-2,2:] +
+         Z[1:-1,0:-2]                + Z[1:-1,2:] +
+         Z[2:  ,0:-2] + Z[2:  ,1:-1] + Z[2:  ,2:])
+
+    # Apply rules
+    birth = (N==3) &amp; (Z[1:-1,1:-1]==0)
+    survive = ((N==2) | (N==3)) &amp; (Z[1:-1,1:-1]==1)
+    Z[...] = 0
+    Z[1:-1,1:-1][birth | survive] = 1
+    return Z
+
+Z = np.random.randint(0,2,(50,50))
+for i in range(100): Z = iterate(Z)
+print(Z)</code></pre><p id="b55a6206-1b99-4f15-86df-d80c2b75bc11" class="">Cellular automaton (Game of Life): <a href="https://en.wikipedia.org/wiki/Cellular_automaton">https://en.wikipedia.org/wiki/Cellular_automaton</a></p><figure id="b928a5cb-ebd4-4e2a-8bf1-ceff29d7e43e" class="image"><a href="76-100%205ea307b670954434ab5de9b97a3fe0ef/Screen_Shot_2021-07-01_at_1.48.26_PM.png"><img style="width:2158px" src="76-100%205ea307b670954434ab5de9b97a3fe0ef/Screen_Shot_2021-07-01_at_1.48.26_PM.png"/></a></figure><p id="5e99b8b5-5f10-42e4-9dfe-fba3c0af95b1" class="">
+</p><p id="6b62e497-9e8c-4ffe-b336-703428eaf262" class=""><strong>#### 89. How to get the n largest values of an array (★★★)</strong></p><p id="eb73113a-21ce-461f-802b-93d08d02b223" class="">`hint: <code>np.argsort</code> | <code>np.argpartition</code> , <code>np.random.shuffle</code>`</p><pre id="0704ec76-7710-4522-91bf-201f5fe6fcad" class="code"><code>Z = np.arange(10000)
+np.random.shuffle(Z)
+n = 5
+
+# Slow
+print (Z[np.argsort(Z)[-n:]])
+
+# Fast
+print (Z[np.argpartition(-Z,n)[:n]])</code></pre><p id="0c6a8b25-f19e-40f6-a3c9-222e590a57ff" class="">
+</p><p id="1b2a5359-1267-41db-9dad-4a9c3925d3bf" class=""><strong>#### 90. Given an arbitrary number of vectors, build the cartesian product (every combinations of every item) (★★★)</strong></p><p id="ebdb7b2e-e139-4c73-a5db-e1c13275a931" class="">`hint: <code>np.indices</code>`</p><pre id="2a3718f3-26de-4001-af1c-47baf18ddb93" class="code"><code># Author: Stefan Van der Walt
+
+def cartesian(arrays):
+    arrays = [np.asarray(a) for a in arrays]
+    shape = (len(x) for x in arrays)
+
+    ix = np.indices(shape, dtype=int)
+    print(ix)
+    ix = ix.reshape(len(arrays), -1).T
+    print(ix)
+    
+    for n, arr in enumerate(arrays):
+        ix[:, n] = arrays[n][ix[:, n]]
+
+    return ix
+
+print (cartesian(([1, 2, 3], [4, 5], [6, 7])))</code></pre><figure id="682fa9c1-cfd4-4c4e-b6af-2c60a0f7cd37" class="image"><a href="76-100%205ea307b670954434ab5de9b97a3fe0ef/Screen_Shot_2021-07-01_at_2.04.14_PM.png"><img style="width:1518px" src="76-100%205ea307b670954434ab5de9b97a3fe0ef/Screen_Shot_2021-07-01_at_2.04.14_PM.png"/></a></figure><p id="35a322b0-b08d-4414-b77a-c76bf6719b16" class="">
+</p><p id="062723cc-6c86-401a-8c01-aa9aadc88e71" class=""><strong>#### 91. How to create a record array from a regular array? (★★★)</strong></p><p id="97971ab5-b8ba-47d0-abb5-47d4ba0aa827" class="">`hint: <code>np.core.records.fromarrays</code>`</p><pre id="c6439e74-6cf3-48be-8af9-be6f679ec907" class="code"><code>Z = np.array([(&quot;Hello&quot;, 2.5, 3),
+              (&quot;World&quot;, 3.6, 2)])
+R = np.core.records.fromarrays(Z.T,names=&#x27;col1, col2, col3&#x27;,formats = &#x27;S8, f8, i8&#x27;)
+print(R)
+&#x27;&#x27;&#x27;
+[(b&#x27;Hello&#x27;, 2.5, 3) (b&#x27;World&#x27;, 3.6, 2)]
+&#x27;&#x27;&#x27;</code></pre><p id="f7e593ba-c58d-40ac-9390-a286afa94b91" class="">
+</p><p id="cd283a6a-3ead-422d-b3e7-43fb15535830" class=""><strong>#### 92. Consider a large vector Z, compute Z to the power of 3 using 3 different methods (★★★)</strong></p><p id="c8a5eb10-8b51-4f92-8aa3-dfb2e2c162a5" class="">`hint: <code>np.power</code>, <code>*</code>, <code>np.einsum</code>`</p><pre id="4aedc525-02d2-4032-8c66-545f3bc925bd" class="code"><code>x = np.random.rand(int(5e7))
+
+%timeit np.power(x,3)
+%timeit x*x*x
+%timeit np.einsum(&#x27;i,i,i-&gt;i&#x27;,x,x,x)
+
+&#x27;&#x27;&#x27;
+2.14 s ± 8.41 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+387 ms ± 8.58 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+346 ms ± 6.28 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+&#x27;&#x27;&#x27;</code></pre><p id="31a6ced9-c5e1-4708-a3c6-96158ba5ab37" class="">
+</p><p id="0891f2dc-c411-4ca9-a575-d403f0983b47" class=""><strong>#### 93. Consider two arrays A and B of shape (8,3) and (2,2). How to find rows of A that contain elements of each row of B regardless of the order of the elements in B? (★★★)</strong></p><p id="4c6bfbe0-ebf2-4421-870b-7698a617d77b" class="">`hint: <code>np.where</code>`</p><pre id="3f52c681-4deb-4373-a030-0daab4a754ab" class="code"><code># Author: Gabe Schwartz
+
+A = np.random.randint(0,5,(8,3))
+B = np.random.randint(0,5,(2,2))
+
+C = (A[..., np.newaxis, np.newaxis] == B)
+print(C)
+print(C.any((3,1)))  # OR along axis(3,1)
+rows = np.where(C.any((3,1)).all(1))[0]
+print(rows)</code></pre><p id="6d47288a-94a4-44a7-a532-645bba56db99" class="">
+</p><p id="dd9cf0a4-59fd-47d4-8e8d-51045cb0b0e5" class=""><strong>#### 94. Considering a 10x3 matrix, extract rows with unequal values (e.g. [2,2,3]) (★★★)</strong></p><pre id="69ddd987-8f5d-4f0c-b152-7eb75ee6bb27" class="code"><code># Author: Robert Kern
+
+Z = np.random.randint(0,5,(10,3))
+print(Z)
+# solution for arrays of all dtypes (including string arrays and record arrays)
+E = np.all(Z[:,1:] == Z[:,:-1], axis=1)
+U = Z[~E]
+print(U)
+# soluiton for numerical arrays only, will work for any number of columns in Z
+U = Z[Z.max(axis=1) != Z.min(axis=1),:]
+print(U)</code></pre><p id="efe4b821-4ba5-4651-9e94-4f7ebeddc96a" class="">
+</p><p id="8c78c1e0-0460-4d06-850c-514e5f143b34" class=""><strong>#### 95. Convert a vector of ints into a matrix binary representation (★★★)</strong></p><p id="cdd7c626-944f-47bb-ab9b-763086ce1de9" class="">`hint: <code>np.unpackbits</code>`</p><pre id="b8c4832e-2375-4428-87cf-3203d72cbf3f" class="code"><code># Author: Warren Weckesser
+
+I = np.array([0, 1, 2, 3, 15, 16, 32, 64, 128])
+B = ((I.reshape(-1,1) &amp; (2**np.arange(8))) != 0).astype(int)
+print(B[:,::-1])
+
+# Author: Daniel T. McDonald
+
+I = np.array([0, 1, 2, 3, 15, 16, 32, 64, 128], dtype=np.uint8)
+print(np.unpackbits(I[:, np.newaxis], axis=1))</code></pre><p id="d5a5d56a-6dbd-491d-a586-6be268469dfa" class="">
+</p><p id="1807e262-a5bd-46f9-b4f1-1865568c9f4c" class=""><strong>#### 96. Given a two dimensional array, how to extract unique rows? (★★★)</strong></p><p id="8bfe46d9-240c-4caf-ad8e-35850aac8c8a" class="">`hint: <code>np.ascontiguousarray</code> | np.unique`</p><pre id="060ef316-c0b2-4dc5-b022-46e5e000765e" class="code"><code># Author: Jaime Fernández del Río
+
+Z = np.random.randint(0,2,(6,3))
+T = np.ascontiguousarray(Z).view(np.dtype((np.void, Z.dtype.itemsize * Z.shape[1])))
+_, idx = np.unique(T, return_index=True)
+uZ = Z[idx]
+print(uZ)
+
+# Author: Andreas Kouzelis
+# NumPy &gt;= 1.13
+uZ = np.unique(Z, axis=0)
+print(uZ)</code></pre><p id="5bf8ff99-0b81-4e6b-9ba7-7263f6fc89b3" class="">
+</p><p id="01ad11ec-af77-4e5a-a6a1-e0a9d719a2d9" class=""><strong>#### 97. Considering 2 vectors A &amp; B, write the einsum equivalent of inner, outer, sum, and mul function (★★★)</strong></p><p id="f8e5064c-5bf3-4d57-8197-19dedab84eac" class="">`hint: <code>np.einsum</code>`</p><pre id="888bc3ae-9a87-42da-b88c-e980e5cb95fd" class="code"><code># Author: Alex Riley
+
+A = np.random.uniform(0,1,5)
+B = np.random.uniform(0,1,5)
+
+np.einsum(&#x27;i-&gt;&#x27;, A)       # np.sum(A)
+np.einsum(&#x27;i,i-&gt;i&#x27;, A, B) # A * B
+np.einsum(&#x27;i,i&#x27;, A, B)    # np.inner(A, B)
+np.einsum(&#x27;i,j-&gt;ij&#x27;, A, B)    # np.outer(A, B)</code></pre><p id="c1ada58d-b801-42ba-8f23-a931b329ce2d" class="">Make sure to read: <a href="http://ajcr.net/Basic-guide-to-einsum/">http://ajcr.net/Basic-guide-to-einsum/</a></p><p id="eedf7d13-54fb-48f5-87a9-43ff73d75316" class="">
+</p><p id="59dac98f-c44d-45b7-85b8-b1a4d7f03697" class=""><strong>#### 98. Considering a path described by two vectors (X,Y), how to sample it using equidistant samples (★★★)?</strong></p><p id="9e6a700e-a516-4acc-a0ee-6948c3e67937" class="">`hint: <code>np.cumsum</code>, <code>np.interp</code>`</p><pre id="c919bed0-5c6a-4584-bf1d-6205bd2dd069" class="code"><code># Author: Bas Swinckels
+
+phi = np.arange(0, 10*np.pi, 0.1)
+a = 1
+x = a*phi*np.cos(phi)
+y = a*phi*np.sin(phi)
+
+dr = (np.diff(x)**2 + np.diff(y)**2)**.5 # segment lengths
+r = np.zeros_like(x)
+r[1:] = np.cumsum(dr)                # integrate path
+r_int = np.linspace(0, r.max(), 200) # regular spaced path
+x_int = np.interp(r_int, r, x)       # integrate path
+y_int = np.interp(r_int, r, y)</code></pre><p id="de208d68-b590-4941-ab02-738d1eaf7f3b" class=""><code>np.interp</code> : <a href="https://numpy.org/doc/stable/reference/generated/numpy.interp.html?highlight=interp#numpy.interp">https://numpy.org/doc/stable/reference/generated/numpy.interp.html?highlight=interp#numpy.interp</a></p><figure id="a59447a0-8bea-49d6-b133-420b06b1aebb" class="image"><a href="76-100%205ea307b670954434ab5de9b97a3fe0ef/Screen_Shot_2021-07-01_at_3.02.51_PM.png"><img style="width:1508px" src="76-100%205ea307b670954434ab5de9b97a3fe0ef/Screen_Shot_2021-07-01_at_3.02.51_PM.png"/></a></figure><p id="8b9180b3-3944-4496-ac40-fe6afb1d2f80" class="">
+</p><p id="530d39e3-1c46-4027-ad55-8ee734e9b778" class=""><strong>#### 99. Given an integer n and a 2D array X, select from X the rows which can be interpreted as draws from a multinomial distribution with n degrees, i.e., the rows which only contain integers and which sum to n. (★★★)</strong></p><p id="d2b1fea1-67d4-44d3-9590-603d47291693" class="">`hint: <code>np.logical_and.reduce</code>, <code>np.mod</code>`</p><pre id="1e5b261f-eae3-4d41-b6e8-8007577ca7bb" class="code"><code>X = np.asarray([[1.0, 0.0, 3.0, 8.0],
+                [2.0, 0.0, 1.0, 1.0],
+                [1.5, 2.5, 1.0, 0.0]])
+n = 4
+M = np.logical_and.reduce(np.mod(X, 1) == 0, axis=-1)
+print(M)  # [ True  True False]
+M &amp;= (X.sum(axis=-1) == n)
+print(M)  # [False  True False]
+print(X[M]) # [[2. 0. 1. 1.]]</code></pre><p id="58964df1-231e-40f3-b700-3c2f5aea729b" class=""><code>np.logical_and</code> : Compute the truth value of x1 AND x2 element-wise.</p><p id="c8a8f26d-3767-481c-bc91-c7fc079ecbe9" class="">
+</p><p id="cbbc98ac-e3a6-44e0-9413-f2c305c74a02" class=""><strong>#### 100. Compute bootstrapped 95% confidence intervals for the mean of a 1D array X (i.e., resample the elements of an array with replacement N times, compute the mean of each sample, and then compute percentiles over the means). (★★★)</strong></p><p id="f729507c-8cd1-470d-9065-21952709e52a" class="">`hint: <code>np.percentile</code>`</p><pre id="cca5aaf8-ce67-4851-8487-85c55aabfdb3" class="code"><code># Author: Jessica B. Hamrick
+
+X = np.random.randn(100) # random 1D array
+N = 1000 # number of bootstrap samples
+idx = np.random.randint(0, X.size, (N, X.size))
+means = X[idx].mean(axis=1) 
+print(means.shape) #(1000,)
+confint = np.percentile(means, [2.5, 97.5])
+print(confint)</code></pre><p id="8416cae6-1d69-4535-b17f-d0bec7929492" class="">confidence intervals: 置信区间</p><p id="23c38d36-4aaf-4651-b94f-3e5340018490" class=""><code>np.percentile</code> : <a href="https://numpy.org/doc/stable/reference/generated/numpy.percentile.html?highlight=percentile#numpy.percentile">https://numpy.org/doc/stable/reference/generated/numpy.percentile.html?highlight=percentile#numpy.percentile</a></p><p id="e070c9cc-5e5b-4745-9804-0b89fb767bfb" class="">
+</p></div></article></body></html>

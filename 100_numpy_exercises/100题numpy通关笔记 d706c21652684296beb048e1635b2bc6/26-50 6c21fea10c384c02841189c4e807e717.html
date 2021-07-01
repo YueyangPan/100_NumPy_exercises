@@ -1,0 +1,806 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>26-50</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="6c21fea1-0c38-4c02-8411-89c4e807e717" class="page sans"><header><h1 class="page-title">26-50</h1></header><div class="page-body"><p id="844f8137-dc0d-40d6-adf9-4bc5a4af1923" class=""><strong>#### 26. What is the output of the following script? (★☆☆)</strong></p><pre id="ac7b1baa-e723-4310-8b45-b5fc770e5d1e" class="code"><code># Author: Jake VanderPlas
+
+print(sum(range(5),-1))
+from numpy import *
+print(sum(range(5),-1))</code></pre><p id="45592915-671a-4913-8502-86f79cc2d5e9" class="">`hint: np.sum`</p><pre id="ab163bda-2731-4d51-b4ab-027b66571e70" class="code"><code># Author: Jake VanderPlas
+
+print(sum(range(5),-1))  # python sum, output 9
+from numpy import *
+print(sum(range(5),-1))  # np.sum, output 10</code></pre><p id="c31c434d-1e09-42a7-8a90-63631f95ac09" class=""><mark class="highlight-pink_background">Tips</mark>:</p><ol id="03051900-7664-41d0-acd1-a31b2775a9fc" class="numbered-list" start="1"><li>Pythons sum will be faster on lists, while NumPys sum will be faster on arrays.</li></ol><ol id="d2d42e08-b727-4eeb-8f0b-e530458d3bdb" class="numbered-list" start="2"><li>Parameters are different.<ul id="8759b121-f4d2-4f07-926d-0556dae98ef8" class="bulleted-list"><li>python sum(): a+start</li></ul><ul id="5fb24294-41d8-4f2f-a5dc-366a1ebc01b6" class="bulleted-list"><li>numpy.sum(): a, axis</li></ul></li></ol><figure id="beee276f-0ba4-4e49-a32e-25bf77a67665" class="image"><a href="26-50%206c21fea10c384c02841189c4e807e717/Screen_Shot_2021-06-23_at_9.46.07_PM.png"><img style="width:1652px" src="26-50%206c21fea10c384c02841189c4e807e717/Screen_Shot_2021-06-23_at_9.46.07_PM.png"/></a></figure><figure id="364466a0-883c-4598-a889-c4dcc899b173" class="image"><a href="26-50%206c21fea10c384c02841189c4e807e717/Screen_Shot_2021-06-23_at_9.46.28_PM.png"><img style="width:1460px" src="26-50%206c21fea10c384c02841189c4e807e717/Screen_Shot_2021-06-23_at_9.46.28_PM.png"/></a></figure><p id="df4116be-5acf-4ef6-a197-dbe3e6c91aba" class="">
+</p><p id="406642e1-f552-4fb7-a757-89447db4b5e6" class=""><strong>#### 27. Consider an integer vector Z, which of these expressions are legal? (★☆☆)</strong></p><pre id="ca65aec1-e674-4d7b-bbb9-7635ea7c33ed" class="code"><code>Z**Z
+2 &lt;&lt; Z &gt;&gt; 2
+Z &lt;- Z
+1j*Z
+Z/1/1
+Z&lt;Z&gt;Z              # invalid</code></pre><figure id="46ae8e00-3f54-4a53-8328-34750c4d7c02" class="image"><a href="26-50%206c21fea10c384c02841189c4e807e717/Screen_Shot_2021-06-23_at_10.07.03_PM.png"><img style="width:432px" src="26-50%206c21fea10c384c02841189c4e807e717/Screen_Shot_2021-06-23_at_10.07.03_PM.png"/></a></figure><p id="bc4e9822-8c13-4d1e-9804-08747bb8f5e1" class="">
+</p><p id="87f02741-bbcd-42d7-8139-71417ad38c04" class="">#### 28. What are the result of the following expressions? (★☆☆)</p><pre id="fa777380-2f3d-4737-8953-06d37d7a33b6" class="code"><code>np.array(0) / np.array(0)
+np.array(0) // np.array(0)
+np.array([np.nan]).astype(int).astype(float)</code></pre><figure id="b56a7b99-8ad7-4716-b109-a36f741c63be" class="image"><a href="26-50%206c21fea10c384c02841189c4e807e717/Screen_Shot_2021-06-23_at_10.16.15_PM.png"><img style="width:432px" src="26-50%206c21fea10c384c02841189c4e807e717/Screen_Shot_2021-06-23_at_10.16.15_PM.png"/></a></figure><p id="17eb8b9e-a1cd-4881-b32b-f3afec8a918c" class="">
+</p><p id="69bc1842-a1d1-4ef9-b72a-90e44ba46239" class=""><strong>#### 29. How to round away from zero a float array ? (★☆☆)</strong></p><p id="51f9667d-7685-41d1-8cbf-71c2d18d5432" class="">`hint: <code>np.random.uniform</code>, <code>np.copysign</code>, <code>np.ceil</code>, <code>np.abs</code>, <code>np.where</code>`</p><pre id="030a145a-ac2e-4b1c-8fec-2a872cb1f20e" class="code"><code>Z= np.random.uniform(-10,+10,10)
+print(Z)
+
+#method 1
+print(np.copysign(np.ceil(np.abs(Z)),Z))
+
+# method 2: More readable but less efficient
+print(np.where(Z&gt;0, np.ceil(Z), np.floor(Z)))</code></pre><figure id="d216c744-3958-44b0-a7dd-978fb99c8bac" class="image"><a href="26-50%206c21fea10c384c02841189c4e807e717/Screen_Shot_2021-06-23_at_10.26.34_PM.png"><img style="width:1454px" src="26-50%206c21fea10c384c02841189c4e807e717/Screen_Shot_2021-06-23_at_10.26.34_PM.png"/></a></figure><p id="c6bd173a-3493-47e2-a447-0dd19a89ef48" class=""><code>np.where</code>: </p><p id="c389a81b-bffc-4364-baca-2839b35ff9d4" class="">Parameters: conditions, [x,y]
+----------
+condition : array_like, bool
+    Where True, yield `x`, otherwise yield `y`.
+x, y : array_like
+    Values from which to choose. `x`, `y` and `condition` need to be
+    broadcastable to some shape.</p><p id="83f5605c-407e-41be-ae54-c4b0e319473a" class="">
+</p><p id="8ead1f19-4ab3-41df-b849-fe1f5bcac1a4" class=""><strong>#### 30. How to find common values between two arrays? (★☆☆)</strong></p><p id="9cd1411c-d605-40e7-9e17-42f459a0b7b8" class="">`hint: <code>np.intersect1d</code>`</p><pre id="0aa87d1e-0439-4933-bbb7-1bb3a414b8ac" class="code"><code>Z1=np.random.randint(0,10,10).reshape(2,5)
+Z2=np.random.randint(0,10,10).reshape(2,5)
+#np.info(np.intersect1d)
+print(np.intersect1d(Z1,Z2,return_indices=False))
+# [2 4 5 8]
+print(np.intersect1d(Z1,Z2,return_indices=True))
+# (array([2, 4, 5, 8]), array([8, 1, 4, 3]), array([1, 5, 6, 8]))</code></pre><p id="b10bd2ba-bfb3-42e8-8029-cc9eb5154bb6" class="">
+</p><p id="fda9b35a-cdd8-4c96-83a1-cf0963a98ac4" class=""><strong>#### 31. How to ignore all numpy warnings (not recommended)? (★☆☆)</strong></p><p id="707210ba-9f78-49be-9a56-3654d8401d49" class="">`hint: <code>np.seterr</code>, <code>np.errstate</code>`</p><pre id="7bf52606-dcf4-4f4d-ad37-48cc6e6aa49b" class="code"><code>defaults = np.seterr(all=&#x27;ignore&#x27;)
+Z=np.ones(1)/0
+
+#Back to sanity
+_ = np.seterr(**defaults)
+
+# Equivalently with a context manager
+with np.errstate(all=&#x27;ignore&#x27;):
+    np.arange(3)/0</code></pre><p id="a9972e76-a71f-4eb9-87f7-b3f4f9ab0c7f" class="">
+</p><p id="9d286ae2-7408-47ef-9c16-12ec90e9a42c" class=""><strong>#### 32. Is the following expressions true? (★☆☆)</strong></p><p id="bc3b8a07-393c-40e8-8293-9469bc241751" class=""><code>np.sqrt</code>(-1) == <code>np.emath.sqrt</code>(-1)</p><p id="671cb05a-b151-4af0-9924-52db9017be2e" class="">`hint: imaginary number`</p><pre id="3800f656-8688-40be-9528-42c8d3f4d109" class="code"><code>print(np.sqrt(-1) == np.emath.sqrt(-1))  # False
+print(np.sqrt(-1)                        # nan
+print(np.emath.sqrt(-1))                 # 1j</code></pre><p id="79d4ed83-df2f-4cd1-ae51-182d25ffdae7" class="">
+</p><p id="c890aeb1-afad-4e2f-816e-686465a280ca" class=""><strong>#### 33. How to get the dates of yesterday, today and tomorrow? (★☆☆)</strong></p><p id="70175efc-0af7-4adf-8789-bd0c121a5be9" class="">`hint: <code>np.datetime64</code>, <code>np.timedelta64</code>`</p><pre id="de2f476e-f5ee-4c14-aac6-1280dc7771d9" class="code"><code>yesterday=np.datetime64(&#x27;today&#x27;)-np.timedelta64(1)
+today = np.datetime64(&#x27;today&#x27;)
+tomorrow = np.datetime64(&#x27;today&#x27;)+ np.timedelta64(1)
+&#x27;&#x27;&#x27;
+2021-06-22
+2021-06-23
+2021-06-24
+&#x27;&#x27;&#x27;</code></pre><p id="a3430bdc-2031-46e5-ba88-5a929609cb9f" class=""><code>np.datetime64</code>: A datetime stored as a 64-bit integer, counting from <code>1970-01-01T00:00:00</code>.</p><p id="423787ed-b5ad-43e0-b4f2-d0fde80c794d" class=""><code>np.timedelta64</code>: A timedelta stored as a 64-bit integer.</p><p id="b4a5996d-5b4e-4dfb-b27e-8f34e9a3210c" class="">
+</p><p id="382b0ee2-c5a7-4174-8455-930e94c7da9e" class=""><strong>#### 34. How to get all the dates corresponding to the month of July 2016? (★★☆)</strong></p><p id="8ce47d3e-86ec-4a9f-9843-3d268e5f5caa" class="">`hint: np.arange(dtype=datetime64[&#x27;D&#x27;])`</p><pre id="361227e9-c7a7-4a1c-bcad-53d6f9c2e571" class="code"><code>Z=np.arange(&#x27;2016-07&#x27;,&#x27;2016-08&#x27;,dtype=&#x27;datetime64[D]&#x27;)
+print(Z)d</code></pre><p id="71f42884-8e9a-4aab-aecf-b3e953e6e79b" class="">
+</p><p id="4395bb92-c604-44da-9289-eae63202fac3" class=""><strong>#### 35. How to compute ((A+B)*(-A/2)) </strong><span style="border-bottom:0.05em solid"><strong>in place</strong></span><strong> (without copy)? (★★☆)</strong></p><p id="c890a3e9-7e1f-4ce2-961c-b8772550289c" class="">`hint: <code>np.add(out=)</code>, <code>np.negative(out=)</code>, <code>np.multiply(out=)</code>, <code>np.divide(out=)</code>`</p><pre id="111d74b9-325d-47f1-874e-9b187162e740" class="code"><code>A = np.ones(3)*1
+B = np.ones(3)*2
+np.add(A,B,out=B)
+np.divide(A,2,out=A)
+np.negative(A,out=A)
+np.multiply(A,B,out=A)
+print(A)</code></pre><p id="bb2da637-3a57-4f25-9a70-4872073394b4" class="">
+</p><p id="acde1e78-5ae2-46a8-be86-16c25e202e15" class=""><strong>#### 36. Extract the integer part of a random array of positive numbers using 4 different methods (★★☆)</strong></p><p id="11157b97-1084-42d4-9508-8535a16929db" class="">`hint: <code>%</code>,<code>//</code>, <code>np.floor</code>, <code>astype</code>, <code>np.trunc</code>`</p><pre id="c138b98b-14fe-42a9-b7ae-ec57fe50d659" class="code"><code>Z=np.random.uniform(0,10,6)
+print(Z-Z%1)            #[0. 6. 7. 2. 5. 4.]
+print(Z//1)             #[0. 6. 7. 2. 5. 4.]
+print(np.floor(Z))      #[0. 6. 7. 2. 5. 4.]
+print(Z.astype(int))    #[0 6 7 2 5 4]
+print(np.trunc(Z))      #[0. 6. 7. 2. 5. 4.]</code></pre><p id="6778145f-ec52-4136-9446-a5c7d0eb8dd4" class=""><code>np.trunc</code>: Return <span style="border-bottom:0.05em solid">the truncated value</span> of the input, element-wise.
+The truncated value of the scalar `x` is the nearest integer `i` which is closer to zero than `x` is. In short, the fractional part of the signed number `x` is discarded.</p><p id="a2c7b42a-206d-4787-bf74-e3e7d5529446" class="">
+</p><p id="ecca00ba-f1cf-4f73-9be4-04b073c636f2" class=""><strong>#### 37. Create a 5x5 matrix with row values ranging from 0 to 4 (★★☆)</strong></p><p id="7af32750-53b2-453d-bba6-70ecbc37be84" class="">`hint: np.arange`</p><pre id="affd4f57-39d6-4e31-8fd4-f3a163080d2b" class="code"><code># method 1: without broadcasting
+Z=np.tile(np.arange(5),(5,1))
+print(Z)
+&#x27;&#x27;&#x27;
+[[0 1 2 3 4]
+ [0 1 2 3 4]
+ [0 1 2 3 4]
+ [0 1 2 3 4]
+ [0 1 2 3 4]]
+&#x27;&#x27;&#x27;
+# method 2: broadcasting (better)
+Z = np.zeros((5,5))
+Z += np.arange(5)
+print(Z)
+&#x27;&#x27;&#x27;
+[[0. 1. 2. 3. 4.]
+ [0. 1. 2. 3. 4.]
+ [0. 1. 2. 3. 4.]
+ [0. 1. 2. 3. 4.]
+ [0. 1. 2. 3. 4.]]
+&#x27;&#x27;&#x27;</code></pre><p id="b904cdc2-5dcb-49c5-8e84-9711a03d5486" class="">
+</p><p id="aa02d55f-fcf9-4ecb-892f-5136ea7858ce" class=""><strong>#### 38. Consider a generator function that generates 10 integers and use it to build an array (★☆☆)</strong></p><p id="ba666166-2f61-4173-bbf3-0db72f2cebf5" class="">`hint: <code>np.fromiter</code>`   # from iteration</p><pre id="8ba6ff71-b7a7-46b5-8ea0-cbbd92b1cd8d" class="code"><code>def generate():
+    for x in range(10):
+        yield x
+Z = np.fromiter(generate(),dtype=float, count=-1)</code></pre><p id="6ba7f42e-cfbe-413c-a64c-a4e009d978fe" class=""><mark class="highlight-pink_background">Tips</mark>:</p><ol id="0f6d5b24-03ef-439d-b15e-606ee04b4c49" class="numbered-list" start="1"><li><code>np.fromiter</code>: fromiter(iterable, dtype, count=-1, *, like=None)
+Create a new 1-dimensional array from an iterable object.</li></ol><ol id="8495a565-a69b-462c-8764-afeafb3e21b0" class="numbered-list" start="2"><li>What does the “<code>yield</code>” keyword do?</li></ol><p id="ab07ef13-c62b-4241-95e2-6b36dd9ea8c9" class=""><a href="https://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do">https://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do</a></p><p id="3363987d-a714-45b3-9830-0918ea84cb17" class="">
+</p><p id="25f0eab8-2283-4bb3-9c8a-e91c547a9111" class=""><strong>#### 39. Create a vector of size 10 with values ranging from 0 to 1, both excluded (★★☆)</strong></p><p id="c4c2c058-4dce-4437-9920-4c2aabfc3781" class="">`hint: <code>np.linspace</code>`</p><pre id="ea9b46af-0ee9-4fec-be5a-79bcdfc1cb76" class="code"><code>Z = np.linspace(0,1,11,endpoint=False)[1:]
+print(Z)</code></pre><p id="518e7170-4f51-4464-a6c5-323c20b8c3cd" class="">
+</p><p id="0d97b303-084a-4584-b725-0b061a94426e" class=""><strong>#### 40. Create a random vector of size 10 and sort it (★★☆)</strong></p><p id="7c490513-f005-4803-a89d-1ecf62a12cc3" class="">`hint: <code>sort</code>`</p><pre id="a8ad7efe-f657-4018-a40d-525fe289b599" class="code"><code>Z = np.random.random(10)
+Z.sort()</code></pre><p id="e8b4fc14-4209-4d2d-b3fb-c465667c2935" class=""><code>numpy.sort</code>(a, axis=- 1, kind=None, order=None)</p><figure id="bf010a28-eea7-44f5-9524-2f0bcf1e9a39" class="image"><a href="26-50%206c21fea10c384c02841189c4e807e717/Screen_Shot_2021-06-24_at_10.27.21_PM.png"><img style="width:480px" src="26-50%206c21fea10c384c02841189c4e807e717/Screen_Shot_2021-06-24_at_10.27.21_PM.png"/></a></figure><p id="01a2df93-7861-4a74-8fa5-1577c181d1d8" class="">
+</p><p id="5510a261-14bc-429f-aad3-9f245aa6a184" class=""><strong>#### 41. How to sum a small array faster than np.sum? (★★☆)</strong></p><p id="9505a2e8-44cd-4bcd-98d6-a3fd79a9b966" class="">`hint: <code>np.add.reduce</code>`</p><pre id="6838db63-6e19-42e0-83af-b67f2ed6a021" class="code"><code>Z = np.arange(10)
+a = np.add.reduce(Z)
+print(a)</code></pre><figure id="a99aaa19-b8f8-453a-89ef-91ff1e119835" class="image"><a href="26-50%206c21fea10c384c02841189c4e807e717/Screen_Shot_2021-06-24_at_10.32.19_PM.png"><img style="width:1556px" src="26-50%206c21fea10c384c02841189c4e807e717/Screen_Shot_2021-06-24_at_10.32.19_PM.png"/></a></figure><p id="161f9e14-9d15-4633-85f1-60e280189c41" class="">
+</p><p id="cecee454-ad92-4c31-aa2f-fab6d9efbd80" class=""><strong>#### 42. Consider two random array A and B, check if they are equal (★★☆)</strong></p><p id="86972555-0bf6-482a-b46d-7cb9b96a88ac" class="">`hint: <code>np.allclose</code>, <code>np.array_equal</code>`</p><pre id="1b2d6df8-afa8-4962-9ba6-1f34ec657815" class="code"><code>A = np.random.randint(0,2,5)
+B = np.random.randint(0,2,5)
+
+# Assuming identical shape of the arrays and a tolerance for the comparison of values
+equal = np.allclose(A,B)
+print(equal)
+
+# Checking both the shape and the element values, no tolerance (values have to be exactly equal)
+equal = np.array_equal(A,B)
+print(equal)</code></pre><p id="d6455408-87e2-4ea6-8309-26392baad08b" class="">
+</p><p id="e179a7c2-1bbf-4e6a-a02d-e0ccfec1b9b9" class=""><strong>#### 43. Make an array immutable (read-only) (★★☆)</strong></p><p id="c163d409-b158-4342-a4e1-450c0fe7e813" class="">`hint: flags.writeable`</p><pre id="5c75e834-b8c3-4872-84a5-4aaea99b43a1" class="code"><code>Z = np.zeros(10)
+Z.flags.writeable = False
+Z[0] = 1
+#ValueError: assignment destination is read-only</code></pre><p id="433824a8-9eeb-454c-9f4b-c5cb51667a48" class="">
+</p><p id="c93d360b-2bb6-43b6-9aed-30986106c931" class=""><strong>#### 44. Consider a random 10x2 matrix representing cartesian coordinates, convert them to polar coordinates (★★☆)</strong></p><p id="1f586011-61db-4fc1-9d6c-e519a22256bf" class="">`hint: <code>np.sqrt</code>, <code>np.arctan2</code>`</p><pre id="b6ec3402-6077-4b2f-8423-99729fe77134" class="code"><code>Z = np.random.random((10,2))
+X,Y = Z[:,0],Z[:,1]
+R = np.sqrt(X**2+Y**2)
+T = np.arctan2(Y,X)
+print(R)
+print(T) # in the range ``[-pi, pi]`</code></pre><p id="e96f6dcc-63bb-45c0-ae67-0f28abd0049d" class="">
+</p><p id="211494c0-a873-4ac9-be59-3d13073fac73" class=""><strong>#### 45. Create random vector of size 10 and replace the maximum value by 0 (★★☆)</strong></p><p id="28c0c580-881c-40d6-a842-1a0c75970642" class="">`hint: <code>argmax</code>`</p><pre id="ca355cb2-a9af-40ba-9753-83f66f6fd6aa" class="code"><code>Z=np.random.random(10)
+Z[Z.argmax()]=0
+print(Z)</code></pre><p id="cc351db2-dd27-4c76-b6e3-b6312327e1ab" class="">
+</p><p id="61378501-afbb-44f5-aeac-762c8a24e17f" class=""><strong>#### 46. Create a structured array with `x` and `y` coordinates covering the [0,1]x[0,1] area (★★☆)</strong></p><p id="a12f19e4-f314-45c1-8b0c-e3506caf3ddc" class="">`hint: <code>np.meshgrid</code>`</p><pre id="b0ac0312-046d-4245-b8b8-d59fe72df799" class="code"><code>Z = np.zeros((5,5),[(&#x27;x&#x27;,float),(&#x27;y&#x27;,float)])
+Z[&#x27;x&#x27;],Z[&#x27;y&#x27;] = np.meshgrid(np.linspace(0,1,5),
+                            np.linspace(0,1,5))
+print(Z)
+&#x27;&#x27;&#x27;
+[[(0.  , 0.  ) (0.25, 0.  ) (0.5 , 0.  ) (0.75, 0.  ) (1.  , 0.  )]
+ [(0.  , 0.25) (0.25, 0.25) (0.5 , 0.25) (0.75, 0.25) (1.  , 0.25)]
+ [(0.  , 0.5 ) (0.25, 0.5 ) (0.5 , 0.5 ) (0.75, 0.5 ) (1.  , 0.5 )]
+ [(0.  , 0.75) (0.25, 0.75) (0.5 , 0.75) (0.75, 0.75) (1.  , 0.75)]
+ [(0.  , 1.  ) (0.25, 1.  ) (0.5 , 1.  ) (0.75, 1.  ) (1.  , 1.  )]]
+&#x27;&#x27;&#x27;</code></pre><p id="49120aeb-9eed-461c-a1b3-f6e7b9cddd56" class="">
+</p><p id="62eb522f-b760-41fe-b7d9-f47f5dc4004b" class=""><strong>#### 47. Given two arrays, X and Y, construct the Cauchy matrix C (Cij =1/(xi - yj)) (★★☆)</strong></p><p id="29c260be-2cb8-4217-9bc8-809ad8524bcb" class="">`hint: <code>np.subtract.outer</code>`</p><pre id="dcfa2f1e-82d5-4d99-abdf-dcb22e4b08c1" class="code"><code>X = np.arange(5)
+Y = X+0.5
+C = 1.0 / np.subtract.outer(X,Y)
+print(C)
+print(np.linalg.det(C))</code></pre><figure id="9ae17561-5713-4bde-a582-137bae34bd59" class="image"><a href="26-50%206c21fea10c384c02841189c4e807e717/Screen_Shot_2021-06-25_at_1.11.17_AM.png"><img style="width:1560px" src="26-50%206c21fea10c384c02841189c4e807e717/Screen_Shot_2021-06-25_at_1.11.17_AM.png"/></a></figure><p id="b19bae68-7a27-4891-90d5-9c11f35c93c5" class="">
+</p><p id="dc025038-52b1-4f96-b2b6-44b853b4368c" class=""><strong>#### 48. Print the minimum and maximum representable value for each numpy scalar type (★★☆)</strong></p><p id="51766357-a7ca-422c-afcc-b1b9f277e575" class="">`hint: <code>np.iinfo</code>, <code>np.finfo</code>, <code>eps</code>`</p><pre id="31a26f63-2f1b-4106-a288-432c5052de22" class="code"><code>for dtype in [np.int8, np.int32, np.int64]:
+    print(np.iinfo(dtype).min)
+    print(np.iinfo(dtype).max)
+&#x27;&#x27;&#x27;
+-128
+127
+-2147483648
+2147483647
+-9223372036854775808
+9223372036854775807
+&#x27;&#x27;&#x27;
+for dtype in [np.float32, np.float64]:
+    print(np.finfo(dtype).min)
+    print(np.finfo(dtype).max)
+    print(np.finfo(dtype).eps)
+&#x27;&#x27;&#x27;
+-3.4028235e+38
+3.4028235e+38
+1.1920929e-07
+-1.7976931348623157e+308
+1.7976931348623157e+308
+2.220446049250313e-16
+&#x27;&#x27;&#x27;</code></pre><figure id="17c4c25b-b6eb-4972-9ddf-3abdb72dc433" class="image"><a href="26-50%206c21fea10c384c02841189c4e807e717/Screen_Shot_2021-06-25_at_1.20.54_AM.png"><img style="width:624px" src="26-50%206c21fea10c384c02841189c4e807e717/Screen_Shot_2021-06-25_at_1.20.54_AM.png"/></a></figure><p id="82357f17-2f32-45f0-982a-11ddaec04f68" class="">
+</p><p id="e76fc22e-2013-4905-9936-2aefc72926f5" class=""><strong>#### 49. How to print all the values of an array? (★★☆)</strong></p><p id="e9d8b583-8a67-4b60-801a-bc37de4cade9" class="">`hint: <code>np.set_printoptions</code>`</p><pre id="0a8db299-4fc2-43aa-a585-989376d084b5" class="code"><code>np.set_printoptions(threshold=float(&#x27;inf&#x27;))
+Z= np.zeros((40,40))
+print(Z)</code></pre><p id="f095d1c7-34bd-4d75-92d9-8f48982ef61c" class="">
+</p><p id="206dd136-10d9-4a20-b1b5-1764af36b9bb" class=""><strong>#### 50. How to find the closest value (to a given scalar) in a vector? (★★☆)</strong></p><p id="9da213e0-a21e-4eb6-a374-8cd6b911db70" class="">`hint: <code>argmin</code>`</p><pre id="45fb7b9b-91a7-44f4-b058-e0cf2b6d0bae" class="code"><code>Z = np.arange(100)
+v = np.random.uniform(0,100)
+print(v) # a scalar
+index = (np.abs(Z-v)).argmin()
+print(Z[index])</code></pre><p id="78292fa8-01d9-4ba0-b368-f258f0db2be7" class="">
+</p></div></article></body></html>

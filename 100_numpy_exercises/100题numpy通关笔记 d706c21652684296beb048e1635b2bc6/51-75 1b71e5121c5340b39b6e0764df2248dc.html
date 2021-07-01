@@ -1,0 +1,883 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>51-75</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="1b71e512-1c53-40b3-9b6e-0764df2248dc" class="page sans"><header><h1 class="page-title">51-75</h1></header><div class="page-body"><p id="3f15041f-3576-4052-83ad-3030f52bd273" class=""><strong>#### 51. Create a structured array representing a position (x,y) and a color (r,g,b) (★★☆)</strong></p><p id="96e6e09b-6c20-42a0-bf3b-38bb9fa6d46d" class="">`hint: dtype`</p><pre id="dc72c18a-3aca-4ec9-be1a-d5e25d2a0622" class="code"><code>Z = np.zeros(6,[(&#x27;position&#x27;,[(&#x27;x&#x27;,float,1),
+                              (&#x27;y&#x27;,float,1)])
+                              ,
+                 (&#x27;color&#x27;,[(&#x27;r&#x27;,float,1),
+                           (&#x27;g&#x27;,float,1),
+                           (&#x27;b&#x27;,float,1)])
+                           ])
+print(Z)
+&#x27;&#x27;&#x27;
+[((0., 0.), (0., 0., 0.)) ((0., 0.), (0., 0., 0.))
+ ((0., 0.), (0., 0., 0.)) ((0., 0.), (0., 0., 0.))
+ ((0., 0.), (0., 0., 0.)) ((0., 0.), (0., 0., 0.))]
+&#x27;&#x27;&#x27;</code></pre><p id="ffe44a80-f7fe-42ba-8c06-4a73703be7dc" class="">
+</p><p id="619fcbd1-46f6-4cd8-8069-93704d4f5b50" class=""><strong>#### 52. Consider a random vector with shape (100,2) representing coordinates, find point by point distances (★★☆)</strong></p><p id="6574ac28-bb00-488e-adb7-02ab6bd141ea" class="">`hint: <code>np.atleast_2d</code>, <code>T</code>, <code>np.sqrt</code>`</p><pre id="10c42078-4aba-45cb-9ba5-1e68eba02e60" class="code"><code># Method 1:
+Z = np.random.random((5,2))
+X,Y = np.atleast_2d(Z[:,0],Z[:,1])
+D = np.sqrt((X-X.T)**2 + (Y-Y.T)**2)
+print(D)
+
+# Method 2:
+# Much faster with scipy
+import scipy
+# Thanks Gavin Heverly-Coulson (#issue 1)
+import scipy.spatial
+Z = np.random.random((10,2))
+D = scipy.spatial.distance.cdist(Z,Z)
+print(D)</code></pre><figure id="aed21bdb-8af8-4d7c-842f-40f70fb9ec93" class="image"><a href="51-75%201b71e5121c5340b39b6e0764df2248dc/Screen_Shot_2021-06-25_at_7.44.24_PM.png"><img style="width:1462px" src="51-75%201b71e5121c5340b39b6e0764df2248dc/Screen_Shot_2021-06-25_at_7.44.24_PM.png"/></a></figure><p id="da889352-0849-4661-92a5-54a920b4543d" class="">
+</p><p id="a774306b-931a-48a7-af73-274ae56e36c1" class=""><strong>#### 53. How to convert a float (32 bits) array into an integer (32 bits) in place?</strong></p><p id="0913cbf3-3839-412d-886f-2c421ce31f7b" class="">`hint: <code>view</code> and <code>[:] =</code>`</p><pre id="919cd03e-de25-40c4-8f44-f320fc92e1fb" class="code"><code># Thanks Vikas (https://stackoverflow.com/a/10622758/5989906)
+# &amp; unutbu (https://stackoverflow.com/a/4396247/5989906)
+
+Z = (np.random.rand(10)*100).astype(np.float32)
+Y= Z.view(np.int32)
+Y[:]=Z
+print(Y)</code></pre><figure id="a8a290ef-dc05-4065-a3c5-0a1cc2e2a365" class="image"><a href="51-75%201b71e5121c5340b39b6e0764df2248dc/Screen_Shot_2021-06-25_at_8.06.27_PM.png"><img style="width:1448px" src="51-75%201b71e5121c5340b39b6e0764df2248dc/Screen_Shot_2021-06-25_at_8.06.27_PM.png"/></a></figure><figure id="ac4f0531-7aa2-42b0-b67e-2301fc3060d0" class="image"><a href="51-75%201b71e5121c5340b39b6e0764df2248dc/Screen_Shot_2021-06-25_at_8.00.52_PM.png"><img style="width:1356px" src="51-75%201b71e5121c5340b39b6e0764df2248dc/Screen_Shot_2021-06-25_at_8.00.52_PM.png"/></a></figure><p id="92b68542-9862-44e2-9718-4c90b1406863" class=""><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.view.html?highlight=view#numpy.ndarray.view">https://numpy.org/doc/stable/reference/generated/numpy.ndarray.view.html?highlight=view#numpy.ndarray.view</a></p><p id="a0efc925-1aa5-40f5-a731-4a4377e7103c" class="">
+</p><p id="d60fa4f8-fbe0-4bb3-b614-2e927be80de1" class=""><strong>#### 54. How to read the following file? (★★☆)</strong></p><pre id="2ee68d7a-8df7-4ca3-b7b4-75e724a3f6b0" class="code"><code>1, 2, 3, 4, 5
+6,  ,  , 7, 8
+ ,  , 9,10,11</code></pre><p id="37999470-47f7-46f3-9b2f-caf20ca7b0ac" class="">`hint: <code>np.genfromtxt</code>`</p><pre id="702deb6a-cba4-4387-9ba0-7f5016ce0324" class="code"><code>from io import StringIO
+
+# Fake file
+s = StringIO(&#x27;&#x27;&#x27;1, 2, 3, 4, 5
+                6,  ,  , 7, 8
+                 ,  , 9,10,11
+&#x27;&#x27;&#x27;)
+Z = np.genfromtxt(s, delimiter=&quot;,&quot;, dtype=np.int)
+print(Z)
+
+&#x27;&#x27;&#x27;
+[[ 1  2  3  4  5]
+ [ 6 -1 -1  7  8]
+ [-1 -1  9 10 11]]
+&#x27;&#x27;&#x27;</code></pre><p id="d20695ce-9dbc-4681-b36a-0cad309b6ee3" class="">
+</p><p id="e14093f6-6b10-4b18-b8b2-ad97ce265053" class=""><strong>#### 55. What is the equivalent of enumerate for numpy arrays? (★★☆)</strong></p><p id="354e905c-2613-4bb4-ae22-0f81328c1a39" class="">`hint: <code>np.ndenumerate</code>, <code>np.ndindex</code>`</p><pre id="d2152428-5d69-4de5-af4c-3e3a979b4c96" class="code"><code>Z = np.arange(9).reshape(3,3)
+for index, value in np.ndenumerate(Z):
+    print(index, value)
+for index in np.ndindex(Z.shape):
+    print(index, Z[index])
+
+&#x27;&#x27;&#x27;
+(0, 0) 0
+(0, 1) 1
+(0, 2) 2
+(1, 0) 3
+(1, 1) 4
+(1, 2) 5
+(2, 0) 6
+(2, 1) 7
+(2, 2) 8
+&#x27;&#x27;&#x27;</code></pre><p id="158dfe7e-1055-4712-9ed8-32e0d168e892" class="">
+</p><p id="98ae4bc8-a39b-4f3c-abc4-d62e1abd367c" class=""><strong>#### 56. Generate a generic 2D Gaussian-like array (★★☆)</strong></p><p id="0f0657c7-7479-40e5-bbad-1e0db04a28d3" class="">`hint: <code>np.meshgrid</code>, <code>np.exp</code>`</p><pre id="da17b45c-571c-452a-8ffc-2e9b4f42fec1" class="code"><code>X, Y = np.meshgrid(np.linspace(-1,1,10), np.linspace(-1,1,10))
+print(X)
+D = np.sqrt(X*X+Y*Y)
+sigma, mu = 1.0, 0.0
+G = np.exp(-( (D-mu)**2 / ( 2.0 * sigma**2 ) ) )
+print(G)</code></pre><p id="41d650ec-e261-4c06-88e9-40a47b558d2f" class="">
+</p><p id="54c59157-70f5-4284-9e3f-93809411dd56" class=""><strong>#### 57. How to randomly place p elements in a 2D array? (★★☆)</strong></p><p id="b90c1449-cfe8-4c9f-8033-5c7a3031025b" class="">`hint: <code>np.put</code>, <code>np.random.choice</code>`</p><pre id="7a8a5bd6-cf8a-4613-982c-a1610fbbc466" class="code"><code>n=5
+v=3
+Z=np.zeros((n,n))
+np.put(Z,np.random.choice(range(n*n),v,replace=False),1)
+print(Z)</code></pre><p id="29a6b08d-93f1-44b4-b75e-ba7d6151186b" class=""><code>np.put</code>: put(a, ind, v, mode=&#x27;raise&#x27;)
+Replaces specified elements of an array with given values.
+The indexing works on the flattened target array. `put` is roughly
+equivalent to:
+    a.flat[ind] = v</p><p id="e881755a-c0c7-4a64-ade7-41e5b37b8be2" class="">
+</p><p id="a86dbced-8148-4bc8-9575-ef64f307e3b5" class=""><strong>#### 58. Subtract the mean of each row of a matrix (★★☆)</strong></p><p id="eb8f3d25-5446-4d3a-a244-5e679afe9141" class="">`hint: <code>mean(axis=,keepdims=)</code>`</p><pre id="4c1eba9b-7caa-4e5a-88b5-767a3a87e6a2" class="code"><code>X = np.random.rand(3, 3)
+Y = X - X.mean(axis=1, keepdims=True)
+print(Y)</code></pre><p id="a8f32c71-fc69-4532-bacf-e52934625c74" class="">
+</p><p id="838d8e33-5a67-45f5-935a-16b8dd2174e2" class=""><strong>#### 59. How to sort an array by the nth column? (★★☆)</strong></p><p id="2a19210f-5e39-4eaf-996e-c955d5b1e8a8" class="">`hint: <code>argsort</code>`</p><pre id="3d2d1896-a27e-4fea-ae56-c141b86eb17d" class="code"><code>Z = np.random.randint(0,10,(3,3))
+print(Z)
+print(Z[Z[:,1].argsort()])</code></pre><p id="2ab62fe7-fbfa-44f3-80e7-43c435256c15" class="">
+</p><p id="4fdb7b89-fbf3-4d71-b4f9-bc7566717fd6" class=""><strong>#### 60. How to tell if a given 2D array has null columns? (★★☆)</strong></p><p id="2778a5c3-9714-437d-848a-3da94dc492ea" class="">`hint: <code>any</code>, <code>~</code>`</p><pre id="9d35fc53-a42e-4cc2-81e1-031bc4213e65" class="code"><code>Z = np.random.randint(0,3,(3,10))
+print(Z)
+print((~Z.any(axis=0)).any())</code></pre><p id="93999f45-d10d-4b55-b582-50a84beb26a7" class=""><code>np.any</code>: any(a, axis=None, out=None, keepdims=&lt;no value&gt;, *, where=&lt;no value&gt;)
+Test whether any array element along a given axis evaluates to True.
+Returns single boolean unless `axis` is not ``None``</p><p id="1a2d5f64-9a1b-4c14-a00c-64f89fdabeaa" class="">
+</p><p id="1bb7720a-eef1-4ca8-bbb2-e2edca070d80" class=""><strong>#### 61. Find the nearest value from a given value in an array (★★☆)</strong></p><p id="e11db371-74fb-40e3-9d04-a8c305846b23" class="">`hint: <code>np.abs</code>, <code>argmin</code>, <code>flat</code>`</p><pre id="6c9e5a4f-e076-4d22-aa18-fdd2ff93faab" class="code"><code>Z = np.random.uniform(0,1,10)
+z = 0.5
+#print(np.abs(Z - z).argmin())
+m = Z.flat[np.abs(Z - z).argmin()]
+print(m)</code></pre><p id="3ffe9c5e-057e-4949-ba18-c88d86deaf64" class=""><code>np.ndarray.flat</code>: A 1-D iterator over the array.
+This is a `numpy.flatiter` instance, which acts similarly to, but is not
+a subclass of, Python&#x27;s built-in iterator object.</p><p id="bc48f72d-41f7-4c46-80fb-2a8ef4a82899" class="">--------
+See Also
+flatten : Return a copy of the array collapsed into one dimension.
+flatiter</p><p id="e1171c12-568a-4a92-be3f-8c6d2554f3b3" class="">
+</p><p id="ca76f8f8-1e8f-45b6-a5a2-a4c5ecf46be8" class=""><strong>#### 62. Considering two arrays with shape (1,3) and (3,1), how to compute their sum using an iterator? (★★☆)</strong></p><p id="5a78542d-6b84-4336-bb1e-8d9f694dc2f2" class="">`hint:<code> np.nditer</code>`</p><pre id="fa2bee64-3ad0-48eb-b040-820c8f711e6c" class="code"><code>A = np.arange(3).reshape(3,1)
+B = np.arange(3).reshape(1,3)
+it = np.nditer([A,B,None])
+for x,y,z in it: 
+    z[...] = x + y
+    #z = x + y
+print(it.operands[0])
+print(it.operands[1])
+print(it.operands[2])
+&#x27;&#x27;&#x27;
+[[0]
+ [1]
+ [2]]
+
+[[0 1 2]]
+
+[[0 1 2]
+ [1 2 3]
+ [2 3 4]]
+&#x27;&#x27;&#x27;</code></pre><p id="64f770d3-bb06-40ce-ae67-37a34d26c697" class="">
+</p><p id="ed9337c9-49b7-42d2-b5ab-b540709d899a" class=""><strong>#### 63. Create an array class that has a name attribute (★★☆)</strong></p><p id="54ba4240-3928-4cb6-b0ce-1b5a9d595407" class="">`hint: class method`</p><pre id="286e3e7c-f8cc-4bb7-8a17-f40a146c5952" class="code"><code>class NamedArray(np.ndarray):
+    def __new__(cls, array, name=&quot;no name&quot;):
+        obj = np.asarray(array).view(cls)
+        obj.name = name
+        return obj
+
+Z = NamedArray(np.arange(10), &quot;range_10&quot;)
+print(Z.name)</code></pre><p id="31f62027-3c31-4a52-97a6-035ff4090283" class="">Tips: python中cls代表的是类的本身，相对应的self则是类的一个实例对象。</p><p id="47c4f588-c691-40a1-9122-8ebcd9e17c45" class="">
+</p><p id="ea349348-e982-4009-ad60-042c36250495" class=""><strong>#### 64. Consider a given vector, how to add 1 to each element indexed by a second vector (be careful with repeated indices)? (★★★)</strong></p><p id="d8f8bdf7-61fe-4d7d-a718-cce475301650" class="">`hint: <code>np.bincount</code> | <code>np.add.at</code>`</p><pre id="565f1065-0a86-4039-a631-fbec6df26bc9" class="code"><code>Z = np.ones(10)
+I = np.random.randint(0,len(Z),20)
+
+# method 1:
+Z += np.bincount(I, minlength=len(Z))
+print(Z)
+
+# method 2:
+np.add.at(Z, I, 1)
+print(Z)</code></pre><p id="b57ee373-9bd0-4606-93b8-9e66f7343787" class=""><code>np.bincount</code>: bincount(x, weights=None, minlength=0)
+Count number of occurrences of each value in array of non-negative ints.</p><p id="9d115fc4-093a-43df-8683-b40af104ed09" class="">The number of bins (of size 1) is one larger than the largest value in`x`. </p><p id="e00866d2-a1fc-4e66-9f26-d840bf717886" class="">If `minlength` is specified, there will be at least this numberof bins in the output array (though it will be longer if necessary, depending on the contents of `x`).</p><p id="4c1ca87b-48e2-4d15-a678-f821da86e64f" class="">
+</p><p id="375cf831-4c02-41f9-98e2-85ab170c76f1" class=""><strong>#### 65. How to accumulate elements of a vector (X) to an array (F) based on an index list (I)? (★★★)</strong></p><p id="2fd4bfb0-b612-4f9a-a13e-e3396b3c2032" class="">`hint: <code>np.bincount</code>`</p><pre id="183ba10e-2053-4a4c-afd6-ffa634f2c862" class="code"><code>X = [1,2,3,4,5,6] # weights
+I = [1,3,9,3,4,1] # bins
+F = np.bincount(I,X)
+print(F)
+
+&#x27;&#x27;&#x27;
+[0. 7. 0. 6. 5. 0. 0. 0. 0. 3.]
+&#x27;&#x27;&#x27;</code></pre><p id="0fee4ef9-3845-4f13-bbf0-8fe7f74f6d4d" class="">
+</p><p id="eb051fc9-0964-4318-b377-2c30d98dc894" class=""><strong>#### 66. Considering a (w,h,3) image of (dtype=ubyte), compute the number of unique colors (★★☆)</strong></p><p id="04022694-791c-473e-be2b-8e66fa3c5294" class="">`hint: <code>np.unique</code>`</p><pre id="1d78bac3-dbae-4c46-bec6-83f7d1c03f60" class="code"><code>w, h = 256, 256
+I = np.random.randint(0, 4, (h, w, 3)).astype(np.ubyte)
+colors = np.unique(I.reshape(-1, 3), axis=0)
+n = len(colors)
+print(n)
+
+# Faster version
+w, h = 256, 256
+I = np.random.randint(0,4,(h,w,3), dtype=np.uint8)
+# View each pixel as a single 24-bit integer, rather than three 8-bit bytes
+I24 = np.dot(I.astype(np.uint32),[1,256,65536])
+# Count unique colours
+n = len(np.unique(I24))
+print(n)</code></pre><p id="3ac8a0f4-e482-4570-ad8b-b2e74c58bc8e" class="">
+</p><p id="3cc45933-ac5e-4f4b-b58b-cfe13e21930a" class=""><strong>#### 67. Considering a four dimensions array, how to get sum over the last two axis at once? (★★★)</strong></p><p id="3b9916bb-132b-418d-83c1-b159ecf6a672" class="">`hint: <code>sum(axis=(-2,-1))</code>`</p><pre id="885d1668-f1d4-4c57-b277-3d605a3482ae" class="code"><code>A = np.random.randint(0,10,(3,4,3,4))
+
+# Method 1:
+# solution by passing a tuple of axes (introduced in numpy 1.7.0)
+sum = A.sum(axis=(-2,-1))
+print(sum)
+
+# Method 2: 
+# solution by flattening the last two dimensions into one
+# (useful for functions that don&#x27;t accept tuples for axis argument)
+print(A.shape[:-2])
+sum = A.reshape(A.shape[:-2] + (-1,)).sum(axis=-1)
+print(sum)</code></pre><p id="99ec6828-8fc8-4700-a9a5-fd3c1d8ab5a6" class="">
+</p><p id="60bbd089-5e41-4cc3-8340-dff6a769f881" class=""><strong>#### 68. Considering a one-dimensional vector D, how to compute means of subsets of D using a vector S of same size describing subset  indices? (★★★)</strong></p><p id="d11bb55f-ffb8-41b2-88d7-66bd58cfec26" class="">`hint: <code>np.bincount</code>`</p><pre id="76ba3a99-fa22-49c1-ad57-590982046f92" class="code"><code>D = np.random.uniform(0,1,100)
+S = np.random.randint(0,10,100)
+D_sums = np.bincount(S, weights=D)
+D_counts = np.bincount(S)
+D_means = D_sums / D_counts
+print(D_means)</code></pre><p id="666f4cd2-a681-4064-b484-ed3a5cc3e40d" class="">
+</p><p id="2091c492-0e01-40ac-927f-44fbc9a65fdd" class=""><strong>#### 69. How to get the diagonal of a dot product? (★★★)</strong></p><p id="26bcf19e-088b-4f7d-a09a-95a1ef809fa2" class="">`hint: <code>np.diag</code> | <code>np.einsum</code>`</p><pre id="6afeb09c-53a2-42a5-93d2-cacbeac70a6f" class="code"><code>A = np.random.uniform(0,1,(5,5))
+B = np.random.uniform(0,1,(5,5))
+
+# Slow version
+Z1=np.diag(np.dot(A, B))
+print(Z1)
+# Fast version
+Z2=np.sum(A * B.T, axis=1)
+print(Z2)
+# Faster version
+Z3=np.einsum(&quot;ij,ji-&gt;i&quot;, A, B)
+print(Z3)</code></pre><p id="cf1a46c0-3d09-4dc8-b16d-e91f54e9a5af" class=""><code>np.einsum</code>:</p><p id="3015b172-ad6c-4225-a28c-a9de3f1299e0" class=""><a href="https://numpy.org/doc/stable/reference/generated/numpy.einsum.html?highlight=einsum#numpy.einsum">https://numpy.org/doc/stable/reference/generated/numpy.einsum.html?highlight=einsum#numpy.einsum</a></p><p id="4f88b80a-a799-4813-b958-c1fda4d468e7" class="">
+</p><p id="fd1a0cfe-e866-4ac0-ae83-7dafcef5d5cb" class=""><strong>#### 70. Consider the vector [1, 2, 3, 4, 5], how to build a new vector with 3 consecutive zeros interleaved between each value? (★★★)</strong></p><p id="940f3811-7ea1-4d4c-be85-9e4ec0d1678c" class="">`hint: <code>array[::4]</code>`</p><pre id="dd23477c-f5b3-4a62-9660-00773c19333d" class="code"><code>Z = np.array([1,2,3,4,5])
+nz = 3
+Z0 = np.zeros(len(Z) + (len(Z)-1)*(nz))
+Z0[::nz+1] = Z
+print(Z0)</code></pre><p id="7b1c489c-c33b-4e71-a527-54879c456e0d" class="">
+</p><p id="89f8b8ab-b2e0-4b87-ba72-75d74cbf6b5d" class=""><strong>#### 71. Consider an array of dimension (5,5,3), how to mulitply it by an array with dimensions (5,5)? (★★★)</strong></p><p id="46a0985d-71b2-4e6d-a2b0-a8e2666e63e7" class="">`hint: <code>array[:, :, None]</code>`</p><pre id="663df4af-6941-4568-aeaf-4a3437bcaa31" class="code"><code>A = np.ones((5,5,3))
+B = 2*np.ones((5,5))
+print(A * B[:,:,None])</code></pre><p id="1d76574d-720c-450a-a2fd-d7534708c141" class="">
+</p><p id="ae53838a-020f-428f-86fd-a07c2a411e33" class=""><strong>#### 72. How to swap two rows of an array? (★★★)</strong></p><p id="435d35ff-8b01-426e-ac41-4df589ef0d03" class="">`hint: <code>array[[]] = array[[]]</code>`</p><pre id="1803ec25-d500-4fd9-99eb-c47bb805c0b6" class="code"><code>A = np.arange(25).reshape(5,5)
+A[[0,1]] = A[[1,0]]
+print(A)</code></pre><p id="d85ddb6d-a241-489d-a41b-13233222bf3b" class="">
+</p><p id="7aaaf9db-b743-4be3-9fa2-bdc9f2960d80" class=""><strong>#### 73. Consider a set of 10 triplets describing 10 triangles (with shared vertices), find the set of unique line segments composing all the  triangles (★★★)</strong></p><p id="5aaa2fce-1261-483d-b163-cc35af93e893" class="">`hint: <code>repeat</code>, <code>np.roll</code>, <code>np.sort</code>, <code>view</code>, <code>np.unique</code>`</p><pre id="8e56a31d-41d2-4012-a2a8-677de0ca7f43" class="code"><code>faces = np.random.randint(0,5,(10,3))
+# creat line segments from vertices
+F = np.roll(faces.repeat(2,axis=1),-1,axis=1)
+F = F.reshape(len(F)*3,2)
+# (16,8) and (8,16)are the same line segment
+F = np.sort(F,axis=1) 
+
+# method 1:
+G = F.view( dtype=[(&#x27;p0&#x27;,F.dtype),(&#x27;p1&#x27;,F.dtype)] )
+G = np.unique(G)
+print(G)
+
+&#x27;&#x27;&#x27;
+[(0, 1) (0, 2) (0, 3) (0, 4) (1, 1) (1, 2) (1, 3) (1, 4) (2, 3) (3, 3)
+ (3, 4)]
+&#x27;&#x27;&#x27;
+
+# method 2:
+L = np.unique(F,axis=0)
+print(L)
+
+&#x27;&#x27;&#x27;
+[[0 1]
+ [0 2]
+ [0 3]
+ [0 4]
+ [1 1]
+ [1 2]
+ [1 3]
+ [1 4]
+ [2 3]
+ [3 3]
+ [3 4]]
+&#x27;&#x27;&#x27;</code></pre><p id="a3773200-767b-478e-bd85-9e19c78fbbf7" class="">
+</p><p id="edb081d2-845c-4d80-8166-7b9133944fb5" class=""><strong>#### 74. Given a sorted array C that corresponds to a bincount, how to produce an array A such that np.bincount(A) == C? (★★★)</strong></p><p id="97e4eb0c-6815-4a2a-84a9-13b1aed285a8" class="">`hint: <code>np.repeat</code>`</p><pre id="153a6eb1-f791-44bf-9061-e51dc4691f5a" class="code"><code>C = np.bincount([1,1,2,3,4,4,6])
+A = np.repeat(np.arange(len(C)), C)
+print(A)</code></pre><p id="b8f2f983-d2be-4584-b1a3-ba16cb7d19a3" class=""><code>np.repeat</code>:</p><p id="0ae6f4ba-98d1-4a85-840f-4c0204ea5718" class=""><a href="https://numpy.org/doc/stable/reference/generated/numpy.repeat.html?highlight=repeat#numpy.repeat">https://numpy.org/doc/stable/reference/generated/numpy.repeat.html?highlight=repeat#numpy.repeat</a></p><p id="bdef9bbf-afa6-4f47-aa37-4c57c465e13e" class="">
+</p><p id="784a004e-081a-4220-8fa5-c45f1f3a26ca" class=""><strong>#### 75. How to compute averages using a sliding window over an array? (★★★)</strong></p><p id="46e26495-4f92-43e5-a48a-b63ca064827c" class="">`hint: <code>np.cumsum</code>`</p><pre id="145d8a27-d030-46d7-bdb7-56bc2100b378" class="code"><code>def moving_average(a, n=3) :
+    ret = np.cumsum(a, dtype=float)
+    ret[n:] = ret[n:] - ret[:-n]
+    return ret[n - 1:] / n # remove the first 2 cumsum
+Z = np.arange(20)
+print(moving_average(Z, n=3))
+
+&#x27;&#x27;&#x27;
+[ 1.  2.  3.  4.  5.  6.  7.  8.  9. 10. 11. 12. 13. 14. 15. 16. 17. 18.]
+&#x27;&#x27;&#x27;</code></pre><p id="183b6c1f-7e83-4850-91d0-4f8d4fb73916" class=""><code>np.cumsum</code>: cumsum(a, axis=None, dtype=None, out=None)
+Return the cumulative sum of the elements along a given axis.</p><p id="d5ffc7e1-4395-4662-9e23-78e391e2c61c" class="">
+</p></div></article></body></html>

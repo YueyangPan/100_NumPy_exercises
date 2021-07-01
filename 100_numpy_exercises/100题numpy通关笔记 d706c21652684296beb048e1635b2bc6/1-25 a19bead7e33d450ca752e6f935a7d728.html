@@ -1,0 +1,706 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>1-25</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="a19bead7-e33d-450c-a752-e6f935a7d728" class="page sans"><header><h1 class="page-title">1-25</h1></header><div class="page-body"><p id="c6ddac4c-5e12-4483-9625-159997350377" class=""><strong>#### 1. Import the numpy package under the name `np` (★☆☆)</strong></p><pre id="37cb2e91-8362-4995-acef-2621edc5a4e1" class="code"><code>import numpy as np</code></pre><p id="965d0643-0eba-492e-b0da-c7e50f85d751" class="">
+</p><p id="182cca8b-f2b8-4b41-b9c4-d334f1a8cee8" class=""><strong>#### 2. Print the numpy version and the configuration (★☆☆)</strong></p><p id="8180a6db-2b58-445f-9972-b8c173e89f2b" class="">hint: <code>np.__version__</code>, <code>np.show_config</code></p><pre id="20a3744f-7df7-4e8c-afe8-42e2e6ef3766" class="code"><code>print(np.__version__)
+np.show_config()</code></pre><p id="a325f0c0-3ee6-407f-b3b5-674938aaa7bd" class="">
+</p><p id="8e755444-4709-4a00-be05-d7a0d9f3d3c2" class=""><strong>#### 3. Create a null vector of size 10 (★☆☆)</strong></p><pre id="946b18dd-828a-496b-badd-b77de2c2da8e" class="code"><code>Z = np.zeros(10)</code></pre><p id="51745a67-95c2-4644-aeee-cb3559b17a7c" class="">
+</p><p id="75468f83-d4ab-4ff4-8009-adfdaa9d2573" class=""><strong>#### 4. How to find the memory size of any array (★☆☆)</strong></p><p id="d6df70ab-2d12-4ef6-a838-45b2deb9137a" class="">hint: size, <code>itemsize</code></p><pre id="3494fe0e-a318-4e8d-b2e2-b6f2feee3015" class="code"><code>Z = np.zeros((10,10))
+print(&quot;%d bytes&quot; % (Z.size * Z.itemsize))</code></pre><p id="5f576ea4-d331-443a-be16-303da0cab869" class="">
+</p><p id="cc0455ed-c061-4e42-8adf-0c5ca23b5817" class=""><strong>#### 5. How to get the documentation of the numpy add function from the command line? (★☆☆)</strong></p><p id="7aea3166-b61c-45de-bae7-eb4392ad66b5" class="">`hint: <code>np.info</code>`</p><pre id="fd84789b-3455-4a74-8279-77a5aaa0560c" class="code"><code>%run `python -c &quot;import numpy; numpy.info(numpy.add)&quot;`</code></pre><p id="495c64c6-2437-4b24-a515-e2894e11b02f" class="">
+</p><p id="40e61a04-fc6a-433b-b4ac-658548af2366" class="">#### 6. Create a null vector of size 10 but the fifth value which is 1 (★☆☆)</p><pre id="537f88ec-e41b-4576-8380-10568428499e" class="code"><code>Z = np.zeros(10)
+Z[4] = 1</code></pre><p id="c68a8982-4d23-4a15-a8fc-c73586398ed9" class="">
+</p><p id="be9f4451-826d-4151-bd83-c5c89676a02d" class=""><strong>#### 7. Create a vector with values ranging from 10 to 49 (★☆☆)</strong></p><p id="9b48407e-cfa2-4bb5-94c9-c05db848e75e" class="">`hint: <code>arange</code>`</p><pre id="4999f047-c0e8-4ead-bd23-73bc9b14ebbd" class="code"><code>Z = np.arange(10,50)</code></pre><p id="16ecdd3d-c309-4ef8-920b-99b23bf0cead" class="">
+</p><p id="8253c135-9843-47c1-ac86-88685de8e0ae" class=""><strong>#### 8. Reverse a vector (first element becomes last) (★☆☆)</strong></p><p id="337a8c69-12b7-4751-80b0-d003d85d81ec" class="">`hint: array[::-1]`</p><pre id="2353ab50-de00-4b20-a623-b273ef1f91b5" class="code"><code>Z = np.arange(50)
+Z = Z[::-1]
+print(Z)</code></pre><p id="a8de1d1e-d9e4-4b13-918b-ce2bd86ef807" class=""><mark class="highlight-pink_background">note</mark>: </p><p id="fb83ad6a-6fd5-4057-8e38-95565281154c" class=""><code>reverse()</code> is used for <code>list</code>, and has no return. </p><p id="73dcf538-63f5-4446-8cc9-47ae7d49a999" class="">[::-1] works for both <code>np.ndarray</code> and <code>list</code>. </p><figure id="61099ef9-2793-44d0-aa63-bffa68f8f035" class="image"><a href="1-25%20a19bead7e33d450ca752e6f935a7d728/Screen_Shot_2021-06-22_at_10.59.43_PM.png"><img style="width:384px" src="1-25%20a19bead7e33d450ca752e6f935a7d728/Screen_Shot_2021-06-22_at_10.59.43_PM.png"/></a></figure><p id="bcc498ae-3b1f-465c-9068-795911710eae" class="">
+</p><p id="69c50870-49f7-4f11-bfc4-5118c71860c3" class=""><strong>#### 9. Create a 3x3 matrix with values ranging from 0 to 8 (★☆☆)</strong></p><p id="7e8f4cc1-7ec7-40d8-a550-bca5b1c507d7" class="">`hint: reshape`</p><pre id="56e6bccb-8beb-46d0-bc20-453b3c1c6b68" class="code"><code>Z = np.arange(9).reshape(3, 3)</code></pre><p id="38d731f3-91fb-42aa-907c-796ca96bf7b8" class="">
+</p><p id="4547c9a3-6052-46da-b4a5-21f8f34d83ae" class=""><strong>#### 10. Find indices of non-zero elements from [1,2,0,0,4,0] (★☆☆)</strong></p><p id="b15653b4-6c91-41b7-a068-2ac9a14910f0" class="">`hint: <code>np.nonzero</code>`</p><pre id="60e2369e-f9f5-450f-97cf-8a1a2bb1833c" class="code"><code>nz = np.nonzero([1,2,0,0,4,0])</code></pre><p id="ff5a32df-d06a-4be7-8387-eb6bfdc2c013" class=""><mark class="highlight-pink_background">note</mark>: </p><p id="cf27dfba-4faf-4150-8f8f-81af01979fc9" class=""><code>np.nonzeros</code>:Returns a tuple of arrays, one for each dimension of a, containing the indices of the non-zero elements in that dimension. The values in a are always tested and returned in row-major, C-style order.  Can used for both <code>np.ndarray</code> and <code>list</code>.</p><p id="8a426be2-815c-4bfb-9b7a-6cd6b60deb74" class=""><code>np.argwhere</code>:Returns a row for each non-zero element, group the indices by element, rather than dimension. <span style="border-bottom:0.05em solid">Only works for </span><code><span style="border-bottom:0.05em solid">np.ndarray</span></code><span style="border-bottom:0.05em solid"> ( not for list).</span> </p><p id="5770120c-caa7-436d-b327-3ff23c4ea595" class=""><code>np.argwhere(a)</code> is almost the same as <code>np.transpose(np.nonzero(a))</code>, but produces a result of the correct shape for a 0D array.</p><figure id="d870951e-67a4-4710-8c3f-21656acb02a8" class="image"><a href="1-25%20a19bead7e33d450ca752e6f935a7d728/Screen_Shot_2021-06-22_at_11.26.52_PM.png"><img style="width:336px" src="1-25%20a19bead7e33d450ca752e6f935a7d728/Screen_Shot_2021-06-22_at_11.26.52_PM.png"/></a></figure><p id="c8528b09-8033-4b97-9c22-58d8a379c44b" class="">
+</p><p id="3f7e8ecd-b0d3-48f6-8d93-062438caa332" class=""><strong>#### 11. Create a 3x3 identity matrix (★☆☆)</strong></p><p id="5d146950-8492-4de7-a8dc-25ec4a0dc834" class="">`hint: <code>np.eye</code>`</p><pre id="bd8c8082-96ca-45d2-854d-d14e393008f5" class="code"><code>Z = np.eye(3)</code></pre><p id="55ef4e6e-5fab-4ac7-b60b-291253b4e687" class="">
+</p><p id="3b55155c-9c11-411b-bbe7-322751097050" class=""><strong>#### 12. Create a 3x3x3 array with random values (★☆☆)</strong></p><p id="8ce94dae-4a62-408a-aff6-7466a4dc363f" class="">`hint: <code>np.random.random</code>`</p><pre id="91cc45a2-d782-4c18-b1f3-2687e2cab1ee" class="code"><code>Z = np.random.random((3,3,3))</code></pre><p id="48202746-2876-4c46-81b7-d1e7a86bb34a" class="">
+</p><p id="2fde4030-4e74-4152-bbae-c1a0c4ba9b39" class=""><strong>#### 13. Create a 10x10 array with random values and find the minimum and maximum values (★☆☆)</strong></p><p id="2ea9a297-b174-4d8d-82dd-597790ce6240" class="">`hint: min, max`</p><pre id="f9251772-5916-46e2-a8e2-2c1214f8e999" class="code"><code>Z=np.random.random((10,10))
+# method 1:
+Zmax=np.max(Z)
+Zmin=np.min(Z)
+# method 2:
+Zmin, Zmax = Z.min(), Z.max()</code></pre><p id="63aa5c14-015c-4d92-9af4-1a0a76decd70" class="">
+</p><p id="cd950b52-becc-4465-856a-aa61d2e85d07" class=""><strong>#### 14. Create a random vector of size 30 and find the mean value (★☆☆)</strong></p><p id="9969ed43-d647-4749-a723-8b58471ea30c" class="">`hint: mean`</p><pre id="ca5f2096-dcf2-494f-905d-34dae6e9efbd" class="code"><code>Z = np.random.random(30)
+m = Z.mean()</code></pre><p id="ec886f7d-050d-49b9-9117-e3cf655005f6" class="">
+</p><p id="638da220-8847-42d2-9d28-3ee10ed35a3f" class=""><strong>#### 15. Create a 2d array with 1 on the border and 0 inside (★☆☆)</strong></p><p id="e37236b0-4e89-48a2-b3cc-557bda80aa21" class="">`hint: <code>array[1:-1, 1:-1]</code>`</p><pre id="69bd39af-7ab7-4e63-bba4-b22e93cfc90a" class="code"><code>Z = np.ones((10,10))
+Z[1:-1,1:-1] = 0 # Intermediate region</code></pre><p id="c7691af4-4eaf-4c47-8911-9608c34bf4b4" class="">
+</p><p id="6afe2eaa-b3e7-400b-b91a-778838f8123b" class=""><strong>#### 16. How to add a border (filled with 0&#x27;s) around an existing array? (★☆☆)</strong></p><p id="82f5d066-c6fb-43ff-8513-27b0c490d5d3" class="">`hint: <code>np.pad</code>`</p><pre id="e60c8260-c7d8-4052-bbfb-6b5607e7dd47" class="code"><code>Z=np.ones((5,5))
+Z= np.pad(Z,pad_width=1,mode=&#x27;constant&#x27;, constant_values=0)</code></pre><p id="3be1ee93-8397-406a-974d-81e224d836c1" class="">
+</p><p id="2b6d783e-272c-47fe-8f07-346f6cc69b63" class=""><strong>#### 17. What is the result of the following expression? (★☆☆)</strong></p><pre id="8ae3712e-4156-4d86-a5d4-56ecf5400444" class="code"><code>0 * np.nan
+np.nan == np.nan
+np.inf &gt; np.nan
+np.nan - np.nan
+np.nan in set([np.nan])
+0.3 == 3 * 0.1</code></pre><p id="fc559df2-51c9-4db3-8a56-174bb6125c04" class="">`hint: NaN = not a number, inf = infinity`</p><figure id="9dfa2343-2656-4b5d-a146-092b10682cde" class="image"><a href="1-25%20a19bead7e33d450ca752e6f935a7d728/Screen_Shot_2021-06-23_at_1.29.11_PM.png"><img style="width:384px" src="1-25%20a19bead7e33d450ca752e6f935a7d728/Screen_Shot_2021-06-23_at_1.29.11_PM.png"/></a></figure><p id="109be9cc-88a9-4366-95ce-8248ced66eb7" class=""><mark class="highlight-pink_background">note: </mark></p><p id="d01c1504-9b08-4b52-a804-d0f592c54d33" class="">The inaccuracy of floating-point 参考：</p><p id="bff33a7a-39a3-49ac-be19-04a477a1fecc" class=""><a href="https://zhuanlan.zhihu.com/p/87672024">https://zhuanlan.zhihu.com/p/87672024</a></p><p id="ccd9be79-81b3-47a9-9033-6c0cc377019f" class="">简单来说，浮点数转二进制时丢失了精度，计算完再转回十进制时就和理论结果不同了</p><p id="6efbc5a8-e633-4248-963c-91590e7b591b" class="">运算后转成 <code>np.float32</code> 舍去一些精度就相等了。</p><p id="ff6b25e6-06ba-4bb4-9f69-c7e6aa69aada" class="">
+</p><p id="a9ac53c7-4e9e-4e5c-b974-aa2bc51ab163" class=""><strong>#### 18. Create a 5x5 matrix with values 1,2,3,4 just below the diagonal (★☆☆)</strong></p><p id="ffd6fac9-b7cc-47e6-b7a5-9798e940b7d9" class="">`hint: <code>np.diag</code>`</p><pre id="33be98a1-0821-4349-88ea-958efe726945" class="code"><code>Z = np.diag(1+np.arange(4),k=-1)
+&#x27;&#x27;&#x27;Z
+[[0 0 0 0 0]
+ [1 0 0 0 0]
+ [0 2 0 0 0]
+ [0 0 3 0 0]
+ [0 0 0 4 0]]
+&#x27;&#x27;&#x27;</code></pre><figure id="28adc04c-b141-4185-9d07-fe2c812c5dcd" class="image"><a href="1-25%20a19bead7e33d450ca752e6f935a7d728/Screen_Shot_2021-06-23_at_1.34.19_PM.png"><img style="width:1450px" src="1-25%20a19bead7e33d450ca752e6f935a7d728/Screen_Shot_2021-06-23_at_1.34.19_PM.png"/></a></figure><p id="86717871-ae3c-4a96-9a70-151fef8da3b4" class="">
+</p><p id="6ac204cf-90c3-4fd6-8e67-f7b4dc270336" class=""><strong>#### 19. Create a 8x8 matrix and fill it with a checkerboard pattern (★☆☆)</strong></p><p id="c5978508-ea7e-4c35-a472-7071c6c94626" class="">`hint: <code>array[::2]</code>`</p><pre id="af988f17-1394-48dd-a2f5-1aa53d9f7e63" class="code"><code>Z = np.zeros((8,8),dtype=int)
+Z[1::2,::2] = 1
+Z[::2,1::2] = 1
+print(Z)
+&#x27;&#x27;&#x27;
+[[0 1 0 1 0 1 0 1]
+ [1 0 1 0 1 0 1 0]
+ [0 1 0 1 0 1 0 1]
+ [1 0 1 0 1 0 1 0]
+ [0 1 0 1 0 1 0 1]
+ [1 0 1 0 1 0 1 0]
+ [0 1 0 1 0 1 0 1]
+ [1 0 1 0 1 0 1 0]]
+&#x27;&#x27;&#x27;</code></pre><p id="67430c8f-4663-47b6-b680-076798a7d2fa" class="">
+</p><p id="50a0708a-48ad-488e-abd2-bfd61bced876" class=""><strong>#### 20. Consider a (6,7,8) shape array, what is the index (x,y,z) of the 100th element? (★☆☆)</strong></p><p id="2a4e8c75-0368-4c75-9a24-81f7ff4febbd" class="">`hint: <code>np.unravel_index</code>`</p><pre id="b2b073f0-7f11-4e5d-9103-c935baccfed8" class="code"><code>print(np.unravel_index(99,(6,7,8)))</code></pre><figure id="92fe2471-442d-4ba4-80d9-a8eb52e30e87" class="image"><a href="1-25%20a19bead7e33d450ca752e6f935a7d728/Screen_Shot_2021-06-23_at_5.00.11_PM.png"><img style="width:1524px" src="1-25%20a19bead7e33d450ca752e6f935a7d728/Screen_Shot_2021-06-23_at_5.00.11_PM.png"/></a></figure><p id="82ab87ef-511e-4927-acf3-42681423941e" class="">
+</p><p id="d6010276-6020-4c24-a8e4-f6239d262b7d" class=""><strong>#### 21. Create a checkerboard 8x8 matrix using the tile function (★☆☆)</strong></p><p id="e83a471a-913a-48bc-bdf9-8bb9157caf37" class="">`hint: <code>np.tile</code>`</p><pre id="c6b68f47-6f5d-4f33-ad10-7c63eade2851" class="code"><code>Z=np.tile([[0,1],[1,0]],(4,4))
+# or 
+Z = np.tile( np.array([[0,1],[1,0]]), (4,4))</code></pre><figure id="61c2b1c9-6c1e-494a-a1e8-465b0e038597" class="image"><a href="1-25%20a19bead7e33d450ca752e6f935a7d728/Screen_Shot_2021-06-23_at_9.06.49_PM.png"><img style="width:1500px" src="1-25%20a19bead7e33d450ca752e6f935a7d728/Screen_Shot_2021-06-23_at_9.06.49_PM.png"/></a></figure><p id="bf6d34a8-d17d-429b-9b22-9a92ceaafd99" class="">
+</p><p id="7470e1e4-145a-4c3d-a821-41432eeb5ce0" class=""><strong>#### 22. Normalize a 5x5 random matrix (★☆☆)</strong></p><p id="67f84a16-8a19-4e1f-a256-6a55c2296134" class="">`hint: <code>(x -mean)/std</code>`</p><pre id="a7a8b2b9-df8a-4eac-ad68-8a990d2b5ea9" class="code"><code>Z = np.random.random((5,5))
+Z = (Z - np.mean (Z)) / (np.std (Z))</code></pre><p id="58a713fe-26b3-4967-8073-98ed5b6ec9bd" class="">
+</p><p id="052df5d9-081f-4edb-98e9-d3710b352b58" class=""><mark class="highlight-orange_background"><strong>#### 23</strong></mark><strong>. Create a custom dtype that describes a color as four unsigned bytes (RGBA) (★☆☆)</strong></p><p id="f46e71d1-9ffd-441e-bfd2-3e26449cc8ab" class="">`hint: <code>np.dtype</code>`</p><pre id="68994c7e-82ae-499b-9cf1-9a05e9a39efe" class="code"><code>color=np.dtype([(&#x27;r&#x27;,np.ubyte),
+                (&#x27;g&#x27;,np.ubyte),
+                (&#x27;b&#x27;,np.ubyte),
+                (&#x27;a&#x27;,np.ubyte)])
+print(color)
+&#x27;&#x27;&#x27;
+[(&#x27;r&#x27;, &#x27;u1&#x27;), (&#x27;g&#x27;, &#x27;u1&#x27;), (&#x27;b&#x27;, &#x27;u1&#x27;), (&#x27;a&#x27;, &#x27;u1&#x27;)]
+&#x27;&#x27;&#x27;</code></pre><p id="e428df79-29ef-49b3-887a-ffa9c4667f8f" class="">
+</p><p id="2593dda2-44d8-481f-9eb9-7db05bfc791d" class=""><strong>#### 24. Multiply a 5x3 matrix by a 3x2 matrix (real matrix product) (★☆☆)</strong></p><p id="4a8f572b-8a6e-4f6a-b0f0-18af8389a43e" class="">`hint: <code>np.dot</code>`</p><pre id="706c5d02-3f43-468a-98aa-912044fe117e" class="code"><code>Z=np.dot(np.ones((5,3)),np.ones((3,2)))
+
+# Alternative solution, in Python 3.5 and above
+Z=np.ones((5,3)) @ np.ones((3,2))</code></pre><p id="ba61acdb-afc6-49b2-b660-f266d3a34795" class="">
+</p><p id="f0b8ce1e-0880-464c-b24b-45ad6660e7a1" class=""><mark class="highlight-orange_background"><strong>#### 25</strong></mark><strong>. Given a 1D array, negate all elements which are between 3 and 8, in place. (★☆☆)</strong></p><p id="382beca8-9d0a-41b8-b54f-d9f520944125" class="">`hint: &gt;, &lt;`</p><pre id="2c1061a1-2001-49b6-8277-b3e6d78084d2" class="code"><code>Z=np.arange(11)
+Z[(Z&lt;8)&amp;(Z&gt;3)]*=-1
+print(Z)</code></pre><p id="e8181355-3668-4c3e-aeb7-4e7fda67edc9" class="">
+</p></div></article></body></html>
